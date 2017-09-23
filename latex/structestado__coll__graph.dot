@@ -1,0 +1,22 @@
+digraph "estado"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="estado",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" powerup" ];
+  Node2 [label="powerup",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structpowerup.html",tooltip="Estrutura que armazena as informações da caixa dos power-ups. "];
+  Node3 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" swap" ];
+  Node3 [label="button",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structbutton.html",tooltip="Estrutura que armazena o estado dos \"botões\" do jogo. "];
+  Node4 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" portanivel\ndoor" ];
+  Node4 [label="posicao",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structposicao.html",tooltip="Estrutura que armazena uma posição. "];
+  Node5 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" inimigo" ];
+  Node5 [label="infoEnemy",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structinfoEnemy.html",tooltip="Estrutura que armazena as informações relativas a um inimigo. "];
+  Node6 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" plus" ];
+  Node6 [label="maisvida",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structmaisvida.html",tooltip="Estrutura que armazena as informações do objeto que recupera uma vida do jogador. ..."];
+  Node7 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" campeao" ];
+  Node7 [label="campeao",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structcampeao.html",tooltip="Estrutura que armazena o nome e o score do jogador. "];
+  Node8 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" obstaculo" ];
+  Node8 [label="infoWall",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structinfoWall.html",tooltip="Estrutura que armazena as informações relativas a um obstáculo. "];
+  Node9 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" jog" ];
+  Node9 [label="infoJog",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structinfoJog.html",tooltip="Estrutura que armazena as informações relativas ao jogador. "];
+}

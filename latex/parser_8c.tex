@@ -1,0 +1,1414 @@
+\hypertarget{parser_8c}{}\section{parser.\+c File Reference}
+\label{parser_8c}\index{parser.\+c@{parser.\+c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include $<$time.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}parser.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}estado.\+h\char`\"{}}\\*
+Include dependency graph for parser.\+c\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{parser_8c_a38636eb437538ca6daae3346e1a3b783}{elem\+\_\+enemy} (\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+DO} e, int x, int y, int i)
+\begin{DoxyCompactList}\small\item\em Função que verifica se existe um certo inimigo numa certa casa. \end{DoxyCompactList}\item 
+int \hyperlink{parser_8c_acde85a82cff4deada1c3a87cd4943b92}{enemy\+\_\+index} (\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+DO} e, int x, int y)
+\begin{DoxyCompactList}\small\item\em Função que encontra o índice de um inimigo. \end{DoxyCompactList}\item 
+int \hyperlink{parser_8c_abe498afccfebc95e2e0dbd34c1b0273e}{elem\+\_\+enemy\+\_\+geral} (\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+DO} e, int x, int y)
+\begin{DoxyCompactList}\small\item\em Função que verifica se existe um inimigo qualquer nas coordenadas dadas. \end{DoxyCompactList}\item 
+int \hyperlink{parser_8c_a07124a32f4ea706a6925ff147bfedfb1}{elem\+\_\+wall} (\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+DO} e, int x, int y, int i)
+\begin{DoxyCompactList}\small\item\em Função que verifica se existe um certo obstáculo numa certa casa. \end{DoxyCompactList}\item 
+int \hyperlink{parser_8c_a8ebff9bb6f250835f68a09cc22ffd5b7}{wall\+\_\+index} (\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+DO} e, int x, int y)
+\begin{DoxyCompactList}\small\item\em Função que encontra o índice de um obstáculo. \end{DoxyCompactList}\item 
+int \hyperlink{parser_8c_af30a8ac58287180cce8e759bfa3e4e15}{elem\+\_\+walls} (\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+DO} e, int x, int y)
+\begin{DoxyCompactList}\small\item\em Função que verifica se existe um qualquer obstáculo num par (x,y). \end{DoxyCompactList}\item 
+int \hyperlink{parser_8c_a868961907f0ab2a0a394cd0483b3295d}{elem\+\_\+powerup} (\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+DO} e, int x, int y)
+\begin{DoxyCompactList}\small\item\em Função que verifica se existe um powerup no par (x,y). \end{DoxyCompactList}\item 
+int \hyperlink{parser_8c_a55c65a47f433ee1fb946af08a2d07416}{pos\+\_\+vazia} (\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+DO} e, int x, int y)
+\begin{DoxyCompactList}\small\item\em Função que verifica se o par (x,y) é uma posição vazia. \end{DoxyCompactList}\item 
+\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+DO} \hyperlink{parser_8c_a2aac5668fa2813f5048ba3a9efb93373}{array\+\_\+highscores} (\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+DO} e)
+\begin{DoxyCompactList}\small\item\em Função que lê os scores de um ficheiro e preenche um array ordenado de highscores. \end{DoxyCompactList}\item 
+\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+DO} \hyperlink{parser_8c_a3aca173396fdf76af71af88e71b6692d}{inicializar} (int nivel, int xporta, int yporta, int score, int state, int \hyperlink{structpowerup}{powerup}, int vida)
+\begin{DoxyCompactList}\small\item\em Função que, recebendo os dados do jogo, inicializa o jogo. \end{DoxyCompactList}\item 
+void \hyperlink{parser_8c_a349d7ef7aebbc7de2b9ed8c718c638cf}{print\+\_\+image} (int px, int py, int tam, char $\ast$imagem)
+\begin{DoxyCompactList}\small\item\em Função que imprime uma imagem. \end{DoxyCompactList}\item 
+void \hyperlink{parser_8c_a6b6dac740258f8950b17dcd40bff1154}{print\+\_\+text} (int x, int y, int f, char $\ast$\hyperlink{parser_8c_a5e30677198f66d562e15d14ca72cb974}{cor}, char $\ast$texto)
+\begin{DoxyCompactList}\small\item\em Função que imprime texto. \end{DoxyCompactList}\item 
+void \hyperlink{parser_8c_aab0420d96d59fa2605bb4dbc61985373}{print\+\_\+rect} (int x, int y, int w, int h, char $\ast$\hyperlink{parser_8c_a5e30677198f66d562e15d14ca72cb974}{cor}, float o)
+\begin{DoxyCompactList}\small\item\em Função que imprime um retângulo. \end{DoxyCompactList}\item 
+void \hyperlink{parser_8c_a54abe09ab42298d18868fc2334129b0e}{print\+\_\+imagem} (int x, int y, int w, int h, char $\ast$imagem)
+\begin{DoxyCompactList}\small\item\em Função que imprime uma imagem. \end{DoxyCompactList}\item 
+void \hyperlink{parser_8c_abda8f17fa0e298c6fb3f20ae361d83c4}{print\+\_\+door} (\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+DO} e)
+\begin{DoxyCompactList}\small\item\em Função que imprime a porta. \end{DoxyCompactList}\item 
+void \hyperlink{parser_8c_aad1bfdae0d1d597cebf3e0ce9acac469}{print\+\_\+powerup} (\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+DO} e)
+\begin{DoxyCompactList}\small\item\em Função que imprime um powerup. \end{DoxyCompactList}\item 
+void \hyperlink{parser_8c_aedd37a524f8f2d4937b677067922af7e}{print\+\_\+plus} (\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+DO} e)
+\begin{DoxyCompactList}\small\item\em Função que o bónus de apanhar uma vida. \end{DoxyCompactList}\item 
+void \hyperlink{parser_8c_a63bb96821a78ff82084843b9efd4f8e1}{print\+\_\+enemies} (\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+DO} e)
+\begin{DoxyCompactList}\small\item\em Função que imprime os inimigos. \end{DoxyCompactList}\item 
+void \hyperlink{parser_8c_a97187175b980fe0ca4607d620f080c91}{print\+\_\+enemy} (\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+DO} e, int i)
+\begin{DoxyCompactList}\small\item\em Função que imprime um certo inimigo. \end{DoxyCompactList}\item 
+void \hyperlink{parser_8c_ab5839f11c8cab1986ea99746784e313b}{print\+\_\+wall} (\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+DO} e, int i)
+\begin{DoxyCompactList}\small\item\em Função que imprime um certo obstáculo. \end{DoxyCompactList}\item 
+int \hyperlink{parser_8c_ac394134dcdf53387420f2db20ed4569e}{mataplayer} (\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+DO} e, int x, int y)
+\begin{DoxyCompactList}\small\item\em Função que verifica se uma casa é vazia ou tem lá o jogador, ou seja, esta função é usada para os inimigos matarem o jogador. \end{DoxyCompactList}\item 
+int \hyperlink{parser_8c_a5b36f538702dfae612f512abb6c5aaea}{rangejogador} (\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+DO} e, int x, int y, int i)
+\begin{DoxyCompactList}\small\item\em Função que verifica se um inimigo está em range para matar um jogador. \end{DoxyCompactList}\item 
+int \hyperlink{parser_8c_ae29f4b81feae934ea2738299ee0cf2ba}{rangefeiticeiro} (\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+DO} e, int x, int y, int i)
+\begin{DoxyCompactList}\small\item\em Função que verifica se um inimigo do tipo feiticeiro está em range para matar um jogador. \end{DoxyCompactList}\item 
+\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+DO} \hyperlink{parser_8c_a72fb6503597206848c6a248625ca1bc8}{mexemonstros} (\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+DO} e, int x, int y)
+\begin{DoxyCompactList}\small\item\em Função que gera as coordenadas para onde os inimigos se devem mover. \end{DoxyCompactList}\item 
+void \hyperlink{parser_8c_ad4234bb85e0ca5eb0cf802cf8ac2f739}{print\+\_\+move} (\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+DO} e, int dX, int dY, char $\ast$nome\+\_\+f)
+\begin{DoxyCompactList}\small\item\em Função que imprime os movimentos e ações. \end{DoxyCompactList}\item 
+void \hyperlink{parser_8c_a9e3feb3f516c5292e90aef7058b37ed0}{print\+\_\+player} (\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+DO} e, char $\ast$nome\+\_\+f)
+\begin{DoxyCompactList}\small\item\em Função que imprime o jogador. \end{DoxyCompactList}\item 
+void \hyperlink{parser_8c_a223df6d5d95a9a235f04b505c07140f0}{print\+\_\+walls} (\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+DO} e)
+\begin{DoxyCompactList}\small\item\em Funnção que imprime os obstáculos. \end{DoxyCompactList}\item 
+void \hyperlink{parser_8c_a489d92a251650492415491f7d7b15ffc}{print\+\_\+square} (int px, int py, int tam)
+\begin{DoxyCompactList}\small\item\em Função que imprime os quadrados do tabuleiro. \end{DoxyCompactList}\item 
+void \hyperlink{parser_8c_a6f31a24fe416c9ce9259ce11ea23a1f1}{print\+\_\+board} ()\hypertarget{parser_8c_a6f31a24fe416c9ce9259ce11ea23a1f1}{}\label{parser_8c_a6f31a24fe416c9ce9259ce11ea23a1f1}
+
+\begin{DoxyCompactList}\small\item\em Função que imprime o tabuleiro. \end{DoxyCompactList}\item 
+void \hyperlink{parser_8c_a75a1c7d5f52477b993cc7d17b9b96ffe}{print\+\_\+level} (\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+DO} e)
+\begin{DoxyCompactList}\small\item\em Função que imprime o nível do jogo atual. \end{DoxyCompactList}\item 
+void \hyperlink{parser_8c_ae8ff332e4c5a5b0387c8acffef6ad64a}{print\+\_\+score} (\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+DO} e)
+\begin{DoxyCompactList}\small\item\em Função que imprime o score atual. \end{DoxyCompactList}\item 
+void \hyperlink{parser_8c_ae9c482df35677dee45ce2f2cdd5acc0e}{print\+\_\+background} (char $\ast$url)
+\begin{DoxyCompactList}\small\item\em Função que imprime o background do jogo. \end{DoxyCompactList}\item 
+void \hyperlink{parser_8c_a14bdcf3b3da55e660de4229e8793bf17}{print\+\_\+letra} ()\hypertarget{parser_8c_a14bdcf3b3da55e660de4229e8793bf17}{}\label{parser_8c_a14bdcf3b3da55e660de4229e8793bf17}
+
+\begin{DoxyCompactList}\small\item\em Função que passa a fonte de texto para \char`\"{}\+Mario\char`\"{}. \end{DoxyCompactList}\item 
+void \hyperlink{parser_8c_a5d4aaef5f27a4ab891c6a6cb318d119a}{print\+\_\+vida} (\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+DO} e)
+\begin{DoxyCompactList}\small\item\em Função que imprime as vidas do jogador. \end{DoxyCompactList}\item 
+void \hyperlink{parser_8c_ab7a82b76c22f4df94e8a629c7b60cb32}{print\+\_\+state} (\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+DO} e)
+\begin{DoxyCompactList}\small\item\em Função que imprime o estado do jogador, i.\+e, se estiver com powerups. \end{DoxyCompactList}\item 
+void \hyperlink{parser_8c_a7d3c3d3dc33dad5de63230e088bd0be1}{print\+\_\+info} (\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+DO} e)
+\begin{DoxyCompactList}\small\item\em Função que imprime as informações do jogador (estado e vida). \end{DoxyCompactList}\item 
+void \hyperlink{parser_8c_a96753bedfc088311858a4303ac7cd4a1}{print\+\_\+giveup} (char $\ast$nome\+\_\+f)
+\begin{DoxyCompactList}\small\item\em Função que imprime o butão \char`\"{}\+Give Up\char`\"{}. \end{DoxyCompactList}\item 
+void \hyperlink{parser_8c_a3b811fbec3f5400fb4ed0b89799823b3}{print\+\_\+help} (\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+DO} e, char $\ast$nome\+\_\+f)
+\begin{DoxyCompactList}\small\item\em Função que imprime o \char`\"{}\+How To Play\char`\"{}. \end{DoxyCompactList}\item 
+void \hyperlink{parser_8c_ae46b8c7c7dcf2666a9800cc6f3215d6d}{print\+\_\+monsterinfo} (\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+DO} e, char $\ast$nome\+\_\+f)
+\begin{DoxyCompactList}\small\item\em Função que imprime o botão \char`\"{}\+Monster Info\char`\"{} com as info dos monstros. \end{DoxyCompactList}\item 
+void \hyperlink{parser_8c_aa2d047c43d299c721b990ff03bdd1ff3}{print\+\_\+chart} (\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+DO} e, char $\ast$nome\+\_\+f)
+\begin{DoxyCompactList}\small\item\em Função que imprime a tabela dos Highscores. \end{DoxyCompactList}\item 
+void \hyperlink{parser_8c_a03f767592caf3c2eac9976994cfc509b}{print\+\_\+range} (\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+DO} e, int i, int dx, int dy)
+\begin{DoxyCompactList}\small\item\em Função que, dada uma posição relativa, mostra se o inimigo pode atacar essa casa. \end{DoxyCompactList}\item 
+void \hyperlink{parser_8c_a12e096eb615b9cb32beadc56e4de1d53}{print\+\_\+enemy\+\_\+range} (\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+DO} e)
+\begin{DoxyCompactList}\small\item\em Função que mostra o alcance do ataque de todos os inimigos. \end{DoxyCompactList}\item 
+void \hyperlink{parser_8c_aab3d679b141414960e615619611e7098}{print\+\_\+select\+\_\+specific} (\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+DO} e, char $\ast$nome\+\_\+f)
+\begin{DoxyCompactList}\small\item\em Função que permite selecionar um inimigo específico para ver o ser alcance de ataque. \end{DoxyCompactList}\item 
+void \hyperlink{parser_8c_abad3d03c10a544e0e040b409fd12ef28}{print\+\_\+show\+\_\+range} (\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+DO} e, char $\ast$nome\+\_\+f)
+\begin{DoxyCompactList}\small\item\em Função que permite ativar/desativar a ajuda de mostrar o range de todos os inimigos. \end{DoxyCompactList}\item 
+void \hyperlink{parser_8c_a09f0f55035c7bdd3023e3c9025e916ba}{print\+\_\+show\+\_\+range\+\_\+specific} (\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+DO} e, char $\ast$nome\+\_\+f)
+\begin{DoxyCompactList}\small\item\em Função que permite ativar/desativar a ajuda de mostrar o range de um inimigo em específico. \end{DoxyCompactList}\item 
+void \hyperlink{parser_8c_aea767e7e8f73612bf5ea5cf638a85a77}{print\+\_\+hints} (\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+DO} e, char $\ast$nome\+\_\+f)
+\begin{DoxyCompactList}\small\item\em Função que imprime o quadrado com as ajudas. \end{DoxyCompactList}\item 
+void \hyperlink{parser_8c_abf022e03c668bfc966ba834b30c586d5}{print\+\_\+lostlife} (\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+DO} e, char $\ast$nome\+\_\+f)
+\begin{DoxyCompactList}\small\item\em Função que imprime o aviso \char`\"{}\+You have lost 1 life.\char`\"{}. \end{DoxyCompactList}\item 
+void \hyperlink{parser_8c_a7614e5009f9238785f17cfcc5356af5e}{print\+\_\+fogo} (int coordx, int coordy)
+\begin{DoxyCompactList}\small\item\em Função que imprime a animação do fogo de explosão. \end{DoxyCompactList}\item 
+void \hyperlink{parser_8c_a74669e6ab67e564385c75e6244960edf}{print\+\_\+boom} (int coordx, int coordy)
+\begin{DoxyCompactList}\small\item\em Função que imprime a animação \char`\"{}\+Boom!\char`\"{}. \end{DoxyCompactList}\item 
+void \hyperlink{parser_8c_adbf15cd642210d07b4fd548b55df1e27}{print\+\_\+bomb} (\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+DO} e, int coordx, int coordy)
+\begin{DoxyCompactList}\small\item\em Função que imprime a animação da explosão da bomba. \end{DoxyCompactList}\item 
+void \hyperlink{parser_8c_a346a31eacb3afaebbf07b0a7644314ba}{print\+\_\+1up} ()\hypertarget{parser_8c_a346a31eacb3afaebbf07b0a7644314ba}{}\label{parser_8c_a346a31eacb3afaebbf07b0a7644314ba}
+
+\begin{DoxyCompactList}\small\item\em Função que imprime a animação de ganhar uma vida. \end{DoxyCompactList}\item 
+void \hyperlink{parser_8c_a3e8c63dce62a6927f271cd74cab42f53}{print\+\_\+nextlevel} ()\hypertarget{parser_8c_a3e8c63dce62a6927f271cd74cab42f53}{}\label{parser_8c_a3e8c63dce62a6927f271cd74cab42f53}
+
+\begin{DoxyCompactList}\small\item\em Função que imprime a animação de passar de nível. \end{DoxyCompactList}\item 
+void \hyperlink{parser_8c_a29717d5791088c8091013689985adc77}{print\+\_\+game} (\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+DO} e, char $\ast$nome\+\_\+f, int acao, int coordx, int coordy)
+\begin{DoxyCompactList}\small\item\em Função que utiliza todas as funções constituintes e imprime o jogo. \end{DoxyCompactList}\item 
+void \hyperlink{parser_8c_a2964b0ac7f00e51b4d36ae9d0058ce34}{print\+\_\+howtoplay} (\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+DO} e, char $\ast$nome\+\_\+f)
+\begin{DoxyCompactList}\small\item\em Função que imprime o \char`\"{}\+How To Play\char`\"{}. \end{DoxyCompactList}\item 
+void \hyperlink{parser_8c_a0e405b96ad090553c3710dfe4b42ee0e}{print\+\_\+menu} (char $\ast$nome\+\_\+f)
+\begin{DoxyCompactList}\small\item\em Função que imprime o menu do jogo. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{parser_8c_a5e30677198f66d562e15d14ca72cb974}{cor} (\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+DO} e, int i, char $\ast$nome\+\_\+f)
+\begin{DoxyCompactList}\small\item\em Função que coloca a cor diferentes os highscores do jogador atual. \end{DoxyCompactList}\item 
+void \hyperlink{parser_8c_a3ddd1b3cc93bd115fbed6ec59bcc632b}{print\+\_\+gameover} (\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+DO} e, char $\ast$nome\+\_\+f)
+\begin{DoxyCompactList}\small\item\em Função que imprime o ecrã de \char`\"{}gameover\char`\"{}. \end{DoxyCompactList}\item 
+void \hyperlink{parser_8c_a99e25438cdceae1b5355f9ebd6accd12}{grava\+\_\+estado} (\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+DO} e, char $\ast$nome\+\_\+f)
+\begin{DoxyCompactList}\small\item\em Função que grava o estado de jogo. \end{DoxyCompactList}\item 
+\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+DO} \hyperlink{parser_8c_a5056711f9f978f5d04f7ce279833ae56}{ler\+\_\+estado} (char $\ast$nome\+\_\+f)
+\begin{DoxyCompactList}\small\item\em Função que lê um estado de jogo. \end{DoxyCompactList}\item 
+void \hyperlink{parser_8c_a32d86e18ecf517b8201cb9d6652383f8}{highscore} (\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+DO} e, char $\ast$nome\+\_\+f)
+\begin{DoxyCompactList}\small\item\em Função que guarda um score no ficheiro de highscores. \end{DoxyCompactList}\item 
+void \hyperlink{parser_8c_a2d722b23cf171d217c975ca4c8a9c331}{print\+\_\+highscores} (\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+DO} e, char $\ast$nome\+\_\+f)
+\begin{DoxyCompactList}\small\item\em Função que imprime o array dos highscores. \end{DoxyCompactList}\item 
+\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+DO} \hyperlink{parser_8c_ab1eae3ada87ddfa0afadefb9c4382f49}{processar\+\_\+acao} (\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+DO} e, char $\ast$nome\+\_\+f, int acao, int coordx, int coordy)
+\begin{DoxyCompactList}\small\item\em Função que processa ação recebida. \end{DoxyCompactList}\item 
+void \hyperlink{parser_8c_a73e03493991ea831766582e299b02cdb}{print\+\_\+jogo} (\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+DO} e, char $\ast$nome\+\_\+f, int acao, int coordx, int coordy)
+\begin{DoxyCompactList}\small\item\em Função que imprime o jogo. \end{DoxyCompactList}\item 
+void \hyperlink{parser_8c_ac15f7c36f6055edec43d0f0f611c4dc0}{parser} ()\hypertarget{parser_8c_ac15f7c36f6055edec43d0f0f611c4dc0}{}\label{parser_8c_ac15f7c36f6055edec43d0f0f611c4dc0}
+
+\begin{DoxyCompactList}\small\item\em Funçao principal, utiliza todas as funções acima. Gera o jogo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Definição das funções que permitem que a parte gráfica do jogo seja visualizada e, portanto, que permitem a execução do jogo. 
+
+\subsection{Function Documentation}
+\index{parser.\+c@{parser.\+c}!array\+\_\+highscores@{array\+\_\+highscores}}
+\index{array\+\_\+highscores@{array\+\_\+highscores}!parser.\+c@{parser.\+c}}
+\subsubsection[{\texorpdfstring{array\+\_\+highscores(\+E\+S\+T\+A\+D\+O e)}{array_highscores(ESTADO e)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+S\+T\+A\+DO} array\+\_\+highscores (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+S\+T\+A\+DO}}]{e}
+\end{DoxyParamCaption}
+)}\hypertarget{parser_8c_a2aac5668fa2813f5048ba3a9efb93373}{}\label{parser_8c_a2aac5668fa2813f5048ba3a9efb93373}
+
+
+Função que lê os scores de um ficheiro e preenche um array ordenado de highscores. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Estado atual do jogo. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Novo estado do jogo com o array preenchido. 
+\end{DoxyReturn}
+\index{parser.\+c@{parser.\+c}!cor@{cor}}
+\index{cor@{cor}!parser.\+c@{parser.\+c}}
+\subsubsection[{\texorpdfstring{cor(\+E\+S\+T\+A\+D\+O e, int i, char $\ast$nome\+\_\+f)}{cor(ESTADO e, int i, char *nome_f)}}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ cor (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+S\+T\+A\+DO}}]{e, }
+\item[{int}]{i, }
+\item[{char $\ast$}]{nome\+\_\+f}
+\end{DoxyParamCaption}
+)}\hypertarget{parser_8c_a5e30677198f66d562e15d14ca72cb974}{}\label{parser_8c_a5e30677198f66d562e15d14ca72cb974}
+
+
+Função que coloca a cor diferentes os highscores do jogador atual. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Estado do jogo atual. \\
+\hline
+{\em i} & Índice no array de highscores. \\
+\hline
+{\em nome\+\_\+f} & Nome do ficheiro/jogador. \\
+\hline
+\end{DoxyParams}
+\index{parser.\+c@{parser.\+c}!elem\+\_\+enemy@{elem\+\_\+enemy}}
+\index{elem\+\_\+enemy@{elem\+\_\+enemy}!parser.\+c@{parser.\+c}}
+\subsubsection[{\texorpdfstring{elem\+\_\+enemy(\+E\+S\+T\+A\+D\+O e, int x, int y, int i)}{elem_enemy(ESTADO e, int x, int y, int i)}}]{\setlength{\rightskip}{0pt plus 5cm}int elem\+\_\+enemy (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+S\+T\+A\+DO}}]{e, }
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)}\hypertarget{parser_8c_a38636eb437538ca6daae3346e1a3b783}{}\label{parser_8c_a38636eb437538ca6daae3346e1a3b783}
+
+
+Função que verifica se existe um certo inimigo numa certa casa. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Estado atual do jogo. \\
+\hline
+{\em x} & Coordenada do eixo dos x. \\
+\hline
+{\em y} & Coordenada do eixo dos y. \\
+\hline
+{\em i} & Nº do inimigo. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna 1 se existir e 0 se não existir. 
+\end{DoxyReturn}
+\index{parser.\+c@{parser.\+c}!elem\+\_\+enemy\+\_\+geral@{elem\+\_\+enemy\+\_\+geral}}
+\index{elem\+\_\+enemy\+\_\+geral@{elem\+\_\+enemy\+\_\+geral}!parser.\+c@{parser.\+c}}
+\subsubsection[{\texorpdfstring{elem\+\_\+enemy\+\_\+geral(\+E\+S\+T\+A\+D\+O e, int x, int y)}{elem_enemy_geral(ESTADO e, int x, int y)}}]{\setlength{\rightskip}{0pt plus 5cm}int elem\+\_\+enemy\+\_\+geral (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+S\+T\+A\+DO}}]{e, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}\hypertarget{parser_8c_abe498afccfebc95e2e0dbd34c1b0273e}{}\label{parser_8c_abe498afccfebc95e2e0dbd34c1b0273e}
+
+
+Função que verifica se existe um inimigo qualquer nas coordenadas dadas. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Estado atual do jogo. \\
+\hline
+{\em x} & Coordenada do eixo dos x. \\
+\hline
+{\em y} & Coordenada do eixo dos y. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna 1 se existir e 0 se não existir. 
+\end{DoxyReturn}
+\index{parser.\+c@{parser.\+c}!elem\+\_\+powerup@{elem\+\_\+powerup}}
+\index{elem\+\_\+powerup@{elem\+\_\+powerup}!parser.\+c@{parser.\+c}}
+\subsubsection[{\texorpdfstring{elem\+\_\+powerup(\+E\+S\+T\+A\+D\+O e, int x, int y)}{elem_powerup(ESTADO e, int x, int y)}}]{\setlength{\rightskip}{0pt plus 5cm}int elem\+\_\+powerup (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+S\+T\+A\+DO}}]{e, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}\hypertarget{parser_8c_a868961907f0ab2a0a394cd0483b3295d}{}\label{parser_8c_a868961907f0ab2a0a394cd0483b3295d}
+
+
+Função que verifica se existe um powerup no par (x,y). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Estado atual do jogo. \\
+\hline
+{\em x} & Coordenada do eixo dos x. \\
+\hline
+{\em y} & Coordenada do eixo dos y. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna 1 se existir e 0 se não existir. 
+\end{DoxyReturn}
+\index{parser.\+c@{parser.\+c}!elem\+\_\+wall@{elem\+\_\+wall}}
+\index{elem\+\_\+wall@{elem\+\_\+wall}!parser.\+c@{parser.\+c}}
+\subsubsection[{\texorpdfstring{elem\+\_\+wall(\+E\+S\+T\+A\+D\+O e, int x, int y, int i)}{elem_wall(ESTADO e, int x, int y, int i)}}]{\setlength{\rightskip}{0pt plus 5cm}int elem\+\_\+wall (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+S\+T\+A\+DO}}]{e, }
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)}\hypertarget{parser_8c_a07124a32f4ea706a6925ff147bfedfb1}{}\label{parser_8c_a07124a32f4ea706a6925ff147bfedfb1}
+
+
+Função que verifica se existe um certo obstáculo numa certa casa. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Estado atual do jogo. \\
+\hline
+{\em x} & Coordenada do eixo dos x. \\
+\hline
+{\em y} & Coordenada do eixo dos y. \\
+\hline
+{\em i} & Nº do inimigo. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna 1 se existir e 0 se não existir. 
+\end{DoxyReturn}
+\index{parser.\+c@{parser.\+c}!elem\+\_\+walls@{elem\+\_\+walls}}
+\index{elem\+\_\+walls@{elem\+\_\+walls}!parser.\+c@{parser.\+c}}
+\subsubsection[{\texorpdfstring{elem\+\_\+walls(\+E\+S\+T\+A\+D\+O e, int x, int y)}{elem_walls(ESTADO e, int x, int y)}}]{\setlength{\rightskip}{0pt plus 5cm}int elem\+\_\+walls (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+S\+T\+A\+DO}}]{e, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}\hypertarget{parser_8c_af30a8ac58287180cce8e759bfa3e4e15}{}\label{parser_8c_af30a8ac58287180cce8e759bfa3e4e15}
+
+
+Função que verifica se existe um qualquer obstáculo num par (x,y). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Estado atual do jogo. \\
+\hline
+{\em x} & Coordenada do eixo dos x. \\
+\hline
+{\em y} & Coordenada do eixo dos y. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna 1 se existir e 0 se não existir. 
+\end{DoxyReturn}
+\index{parser.\+c@{parser.\+c}!enemy\+\_\+index@{enemy\+\_\+index}}
+\index{enemy\+\_\+index@{enemy\+\_\+index}!parser.\+c@{parser.\+c}}
+\subsubsection[{\texorpdfstring{enemy\+\_\+index(\+E\+S\+T\+A\+D\+O e, int x, int y)}{enemy_index(ESTADO e, int x, int y)}}]{\setlength{\rightskip}{0pt plus 5cm}int enemy\+\_\+index (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+S\+T\+A\+DO}}]{e, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}\hypertarget{parser_8c_acde85a82cff4deada1c3a87cd4943b92}{}\label{parser_8c_acde85a82cff4deada1c3a87cd4943b92}
+
+
+Função que encontra o índice de um inimigo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Estado atual do jogo. \\
+\hline
+{\em x} & Coordenada do eixo dos x. \\
+\hline
+{\em y} & Coordenada do eixo dos y. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna o índice do inimigo. 
+\end{DoxyReturn}
+\index{parser.\+c@{parser.\+c}!grava\+\_\+estado@{grava\+\_\+estado}}
+\index{grava\+\_\+estado@{grava\+\_\+estado}!parser.\+c@{parser.\+c}}
+\subsubsection[{\texorpdfstring{grava\+\_\+estado(\+E\+S\+T\+A\+D\+O e, char $\ast$nome\+\_\+f)}{grava_estado(ESTADO e, char *nome_f)}}]{\setlength{\rightskip}{0pt plus 5cm}void grava\+\_\+estado (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+S\+T\+A\+DO}}]{e, }
+\item[{char $\ast$}]{nome\+\_\+f}
+\end{DoxyParamCaption}
+)}\hypertarget{parser_8c_a99e25438cdceae1b5355f9ebd6accd12}{}\label{parser_8c_a99e25438cdceae1b5355f9ebd6accd12}
+
+
+Função que grava o estado de jogo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Estado de jogo atual. \\
+\hline
+{\em nome\+\_\+f} & Nome do ficheiro/jogador. \\
+\hline
+\end{DoxyParams}
+\index{parser.\+c@{parser.\+c}!highscore@{highscore}}
+\index{highscore@{highscore}!parser.\+c@{parser.\+c}}
+\subsubsection[{\texorpdfstring{highscore(\+E\+S\+T\+A\+D\+O e, char $\ast$nome\+\_\+f)}{highscore(ESTADO e, char *nome_f)}}]{\setlength{\rightskip}{0pt plus 5cm}void highscore (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+S\+T\+A\+DO}}]{e, }
+\item[{char $\ast$}]{nome\+\_\+f}
+\end{DoxyParamCaption}
+)}\hypertarget{parser_8c_a32d86e18ecf517b8201cb9d6652383f8}{}\label{parser_8c_a32d86e18ecf517b8201cb9d6652383f8}
+
+
+Função que guarda um score no ficheiro de highscores. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Estado de jogo atual. \\
+\hline
+{\em nome\+\_\+f} & Nome do ficheiro/jogo. \\
+\hline
+\end{DoxyParams}
+\index{parser.\+c@{parser.\+c}!inicializar@{inicializar}}
+\index{inicializar@{inicializar}!parser.\+c@{parser.\+c}}
+\subsubsection[{\texorpdfstring{inicializar(int nivel, int xporta, int yporta, int score, int state, int powerup, int vida)}{inicializar(int nivel, int xporta, int yporta, int score, int state, int powerup, int vida)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+S\+T\+A\+DO} inicializar (
+\begin{DoxyParamCaption}
+\item[{int}]{nivel, }
+\item[{int}]{xporta, }
+\item[{int}]{yporta, }
+\item[{int}]{score, }
+\item[{int}]{state, }
+\item[{int}]{powerup, }
+\item[{int}]{vida}
+\end{DoxyParamCaption}
+)}\hypertarget{parser_8c_a3aca173396fdf76af71af88e71b6692d}{}\label{parser_8c_a3aca173396fdf76af71af88e71b6692d}
+
+
+Função que, recebendo os dados do jogo, inicializa o jogo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nivel} & Nível do jogo. \\
+\hline
+{\em xporta} & Coordenada x da porta. \\
+\hline
+{\em yporta} & Coordenada y da porta. \\
+\hline
+{\em score} & Score do jogador atual. \\
+\hline
+{\em state} & Estado do jogador, i.\+e, se tem power-\/ups. \\
+\hline
+{\em powerup} & Power-\/up que o jogador tem atualmente. \\
+\hline
+{\em vida} & Vida do jogador. \\
+\hline
+\end{DoxyParams}
+\index{parser.\+c@{parser.\+c}!ler\+\_\+estado@{ler\+\_\+estado}}
+\index{ler\+\_\+estado@{ler\+\_\+estado}!parser.\+c@{parser.\+c}}
+\subsubsection[{\texorpdfstring{ler\+\_\+estado(char $\ast$nome\+\_\+f)}{ler_estado(char *nome_f)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+S\+T\+A\+DO} ler\+\_\+estado (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{nome\+\_\+f}
+\end{DoxyParamCaption}
+)}\hypertarget{parser_8c_a5056711f9f978f5d04f7ce279833ae56}{}\label{parser_8c_a5056711f9f978f5d04f7ce279833ae56}
+
+
+Função que lê um estado de jogo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nome\+\_\+f} & Nome do ficheiro/jogador. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Estado lido. 
+\end{DoxyReturn}
+\index{parser.\+c@{parser.\+c}!mataplayer@{mataplayer}}
+\index{mataplayer@{mataplayer}!parser.\+c@{parser.\+c}}
+\subsubsection[{\texorpdfstring{mataplayer(\+E\+S\+T\+A\+D\+O e, int x, int y)}{mataplayer(ESTADO e, int x, int y)}}]{\setlength{\rightskip}{0pt plus 5cm}int mataplayer (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+S\+T\+A\+DO}}]{e, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}\hypertarget{parser_8c_ac394134dcdf53387420f2db20ed4569e}{}\label{parser_8c_ac394134dcdf53387420f2db20ed4569e}
+
+
+Função que verifica se uma casa é vazia ou tem lá o jogador, ou seja, esta função é usada para os inimigos matarem o jogador. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Estado atual do jogo. \\
+\hline
+{\em x} & Coordenada no eixo dos x. \\
+\hline
+{\em y} & Coordenada no eixo dos y. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna 1 se for vazia ou estiver lá um jogador e 0 caso contrário. 
+\end{DoxyReturn}
+\index{parser.\+c@{parser.\+c}!mexemonstros@{mexemonstros}}
+\index{mexemonstros@{mexemonstros}!parser.\+c@{parser.\+c}}
+\subsubsection[{\texorpdfstring{mexemonstros(\+E\+S\+T\+A\+D\+O e, int x, int y)}{mexemonstros(ESTADO e, int x, int y)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+S\+T\+A\+DO} mexemonstros (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+S\+T\+A\+DO}}]{e, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}\hypertarget{parser_8c_a72fb6503597206848c6a248625ca1bc8}{}\label{parser_8c_a72fb6503597206848c6a248625ca1bc8}
+
+
+Função que gera as coordenadas para onde os inimigos se devem mover. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Estado atual do jogo. \\
+\hline
+{\em x} & Coordenada do jogador no eixo dos x. \\
+\hline
+{\em y} & Coordenada do jogador no eixo dos y. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Novo estado de jogo com as novas coordenadas dos inimigos. 
+\end{DoxyReturn}
+\index{parser.\+c@{parser.\+c}!pos\+\_\+vazia@{pos\+\_\+vazia}}
+\index{pos\+\_\+vazia@{pos\+\_\+vazia}!parser.\+c@{parser.\+c}}
+\subsubsection[{\texorpdfstring{pos\+\_\+vazia(\+E\+S\+T\+A\+D\+O e, int x, int y)}{pos_vazia(ESTADO e, int x, int y)}}]{\setlength{\rightskip}{0pt plus 5cm}int pos\+\_\+vazia (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+S\+T\+A\+DO}}]{e, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}\hypertarget{parser_8c_a55c65a47f433ee1fb946af08a2d07416}{}\label{parser_8c_a55c65a47f433ee1fb946af08a2d07416}
+
+
+Função que verifica se o par (x,y) é uma posição vazia. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Estado atual do jogo. \\
+\hline
+{\em x} & Coordenada do eixo dos x. \\
+\hline
+{\em y} & Coordenada do eixo dos y. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returna 1 se for vazia e 0 se não for. 
+\end{DoxyReturn}
+\index{parser.\+c@{parser.\+c}!print\+\_\+background@{print\+\_\+background}}
+\index{print\+\_\+background@{print\+\_\+background}!parser.\+c@{parser.\+c}}
+\subsubsection[{\texorpdfstring{print\+\_\+background(char $\ast$url)}{print_background(char *url)}}]{\setlength{\rightskip}{0pt plus 5cm}void print\+\_\+background (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{url}
+\end{DoxyParamCaption}
+)}\hypertarget{parser_8c_ae9c482df35677dee45ce2f2cdd5acc0e}{}\label{parser_8c_ae9c482df35677dee45ce2f2cdd5acc0e}
+
+
+Função que imprime o background do jogo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em url} & Url da imagem. \\
+\hline
+\end{DoxyParams}
+\index{parser.\+c@{parser.\+c}!print\+\_\+bomb@{print\+\_\+bomb}}
+\index{print\+\_\+bomb@{print\+\_\+bomb}!parser.\+c@{parser.\+c}}
+\subsubsection[{\texorpdfstring{print\+\_\+bomb(\+E\+S\+T\+A\+D\+O e, int coordx, int coordy)}{print_bomb(ESTADO e, int coordx, int coordy)}}]{\setlength{\rightskip}{0pt plus 5cm}void print\+\_\+bomb (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+S\+T\+A\+DO}}]{e, }
+\item[{int}]{coordx, }
+\item[{int}]{coordy}
+\end{DoxyParamCaption}
+)}\hypertarget{parser_8c_adbf15cd642210d07b4fd548b55df1e27}{}\label{parser_8c_adbf15cd642210d07b4fd548b55df1e27}
+
+
+Função que imprime a animação da explosão da bomba. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Estado atual do jogo. \\
+\hline
+{\em coordx} & Coordenada no eixo dos x. \\
+\hline
+{\em coordy} & Coordenada no eixo dos y. \\
+\hline
+\end{DoxyParams}
+\index{parser.\+c@{parser.\+c}!print\+\_\+boom@{print\+\_\+boom}}
+\index{print\+\_\+boom@{print\+\_\+boom}!parser.\+c@{parser.\+c}}
+\subsubsection[{\texorpdfstring{print\+\_\+boom(int coordx, int coordy)}{print_boom(int coordx, int coordy)}}]{\setlength{\rightskip}{0pt plus 5cm}void print\+\_\+boom (
+\begin{DoxyParamCaption}
+\item[{int}]{coordx, }
+\item[{int}]{coordy}
+\end{DoxyParamCaption}
+)}\hypertarget{parser_8c_a74669e6ab67e564385c75e6244960edf}{}\label{parser_8c_a74669e6ab67e564385c75e6244960edf}
+
+
+Função que imprime a animação \char`\"{}\+Boom!\char`\"{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em coordx} & Coordenada no eixo dos x. \\
+\hline
+{\em coordy} & Coordenada no eixo dos y. \\
+\hline
+\end{DoxyParams}
+\index{parser.\+c@{parser.\+c}!print\+\_\+chart@{print\+\_\+chart}}
+\index{print\+\_\+chart@{print\+\_\+chart}!parser.\+c@{parser.\+c}}
+\subsubsection[{\texorpdfstring{print\+\_\+chart(\+E\+S\+T\+A\+D\+O e, char $\ast$nome\+\_\+f)}{print_chart(ESTADO e, char *nome_f)}}]{\setlength{\rightskip}{0pt plus 5cm}void print\+\_\+chart (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+S\+T\+A\+DO}}]{e, }
+\item[{char $\ast$}]{nome\+\_\+f}
+\end{DoxyParamCaption}
+)}\hypertarget{parser_8c_aa2d047c43d299c721b990ff03bdd1ff3}{}\label{parser_8c_aa2d047c43d299c721b990ff03bdd1ff3}
+
+
+Função que imprime a tabela dos Highscores. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Estado atual do jogo. \\
+\hline
+{\em nome\+\_\+f} & Nome do ficheiro/jogador. \\
+\hline
+\end{DoxyParams}
+\index{parser.\+c@{parser.\+c}!print\+\_\+door@{print\+\_\+door}}
+\index{print\+\_\+door@{print\+\_\+door}!parser.\+c@{parser.\+c}}
+\subsubsection[{\texorpdfstring{print\+\_\+door(\+E\+S\+T\+A\+D\+O e)}{print_door(ESTADO e)}}]{\setlength{\rightskip}{0pt plus 5cm}void print\+\_\+door (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+S\+T\+A\+DO}}]{e}
+\end{DoxyParamCaption}
+)}\hypertarget{parser_8c_abda8f17fa0e298c6fb3f20ae361d83c4}{}\label{parser_8c_abda8f17fa0e298c6fb3f20ae361d83c4}
+
+
+Função que imprime a porta. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Estado atual do jogo. \\
+\hline
+\end{DoxyParams}
+\index{parser.\+c@{parser.\+c}!print\+\_\+enemies@{print\+\_\+enemies}}
+\index{print\+\_\+enemies@{print\+\_\+enemies}!parser.\+c@{parser.\+c}}
+\subsubsection[{\texorpdfstring{print\+\_\+enemies(\+E\+S\+T\+A\+D\+O e)}{print_enemies(ESTADO e)}}]{\setlength{\rightskip}{0pt plus 5cm}void print\+\_\+enemies (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+S\+T\+A\+DO}}]{e}
+\end{DoxyParamCaption}
+)}\hypertarget{parser_8c_a63bb96821a78ff82084843b9efd4f8e1}{}\label{parser_8c_a63bb96821a78ff82084843b9efd4f8e1}
+
+
+Função que imprime os inimigos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Estado atual do jogo. \\
+\hline
+\end{DoxyParams}
+\index{parser.\+c@{parser.\+c}!print\+\_\+enemy@{print\+\_\+enemy}}
+\index{print\+\_\+enemy@{print\+\_\+enemy}!parser.\+c@{parser.\+c}}
+\subsubsection[{\texorpdfstring{print\+\_\+enemy(\+E\+S\+T\+A\+D\+O e, int i)}{print_enemy(ESTADO e, int i)}}]{\setlength{\rightskip}{0pt plus 5cm}void print\+\_\+enemy (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+S\+T\+A\+DO}}]{e, }
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)}\hypertarget{parser_8c_a97187175b980fe0ca4607d620f080c91}{}\label{parser_8c_a97187175b980fe0ca4607d620f080c91}
+
+
+Função que imprime um certo inimigo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Estado atual do jogo. \\
+\hline
+{\em i} & Índice do inimigo. \\
+\hline
+\end{DoxyParams}
+\index{parser.\+c@{parser.\+c}!print\+\_\+enemy\+\_\+range@{print\+\_\+enemy\+\_\+range}}
+\index{print\+\_\+enemy\+\_\+range@{print\+\_\+enemy\+\_\+range}!parser.\+c@{parser.\+c}}
+\subsubsection[{\texorpdfstring{print\+\_\+enemy\+\_\+range(\+E\+S\+T\+A\+D\+O e)}{print_enemy_range(ESTADO e)}}]{\setlength{\rightskip}{0pt plus 5cm}void print\+\_\+enemy\+\_\+range (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+S\+T\+A\+DO}}]{e}
+\end{DoxyParamCaption}
+)}\hypertarget{parser_8c_a12e096eb615b9cb32beadc56e4de1d53}{}\label{parser_8c_a12e096eb615b9cb32beadc56e4de1d53}
+
+
+Função que mostra o alcance do ataque de todos os inimigos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Estado atual do jogo. \\
+\hline
+\end{DoxyParams}
+\index{parser.\+c@{parser.\+c}!print\+\_\+fogo@{print\+\_\+fogo}}
+\index{print\+\_\+fogo@{print\+\_\+fogo}!parser.\+c@{parser.\+c}}
+\subsubsection[{\texorpdfstring{print\+\_\+fogo(int coordx, int coordy)}{print_fogo(int coordx, int coordy)}}]{\setlength{\rightskip}{0pt plus 5cm}void print\+\_\+fogo (
+\begin{DoxyParamCaption}
+\item[{int}]{coordx, }
+\item[{int}]{coordy}
+\end{DoxyParamCaption}
+)}\hypertarget{parser_8c_a7614e5009f9238785f17cfcc5356af5e}{}\label{parser_8c_a7614e5009f9238785f17cfcc5356af5e}
+
+
+Função que imprime a animação do fogo de explosão. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em coordx} & Coordenada no eixo dos x. \\
+\hline
+{\em coordy} & Coordenada no eixo dos y. \\
+\hline
+\end{DoxyParams}
+\index{parser.\+c@{parser.\+c}!print\+\_\+game@{print\+\_\+game}}
+\index{print\+\_\+game@{print\+\_\+game}!parser.\+c@{parser.\+c}}
+\subsubsection[{\texorpdfstring{print\+\_\+game(\+E\+S\+T\+A\+D\+O e, char $\ast$nome\+\_\+f, int acao, int coordx, int coordy)}{print_game(ESTADO e, char *nome_f, int acao, int coordx, int coordy)}}]{\setlength{\rightskip}{0pt plus 5cm}void print\+\_\+game (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+S\+T\+A\+DO}}]{e, }
+\item[{char $\ast$}]{nome\+\_\+f, }
+\item[{int}]{acao, }
+\item[{int}]{coordx, }
+\item[{int}]{coordy}
+\end{DoxyParamCaption}
+)}\hypertarget{parser_8c_a29717d5791088c8091013689985adc77}{}\label{parser_8c_a29717d5791088c8091013689985adc77}
+
+
+Função que utiliza todas as funções constituintes e imprime o jogo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Estado atual do jogo. \\
+\hline
+{\em nome\+\_\+f} & Nome do ficheiro/jogo. \\
+\hline
+{\em acao} & Ação de jogo, i.\+e, o que vai fazer o jogador. \\
+\hline
+{\em coordx} & Coordenada no eixo dos x. \\
+\hline
+{\em coordy} & Coordenada no eixo dos y. \\
+\hline
+\end{DoxyParams}
+\index{parser.\+c@{parser.\+c}!print\+\_\+gameover@{print\+\_\+gameover}}
+\index{print\+\_\+gameover@{print\+\_\+gameover}!parser.\+c@{parser.\+c}}
+\subsubsection[{\texorpdfstring{print\+\_\+gameover(\+E\+S\+T\+A\+D\+O e, char $\ast$nome\+\_\+f)}{print_gameover(ESTADO e, char *nome_f)}}]{\setlength{\rightskip}{0pt plus 5cm}void print\+\_\+gameover (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+S\+T\+A\+DO}}]{e, }
+\item[{char $\ast$}]{nome\+\_\+f}
+\end{DoxyParamCaption}
+)}\hypertarget{parser_8c_a3ddd1b3cc93bd115fbed6ec59bcc632b}{}\label{parser_8c_a3ddd1b3cc93bd115fbed6ec59bcc632b}
+
+
+Função que imprime o ecrã de \char`\"{}gameover\char`\"{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Estado de jogo atual. \\
+\hline
+{\em nome\+\_\+f} & Nome do ficheiro/jogador. \\
+\hline
+\end{DoxyParams}
+\index{parser.\+c@{parser.\+c}!print\+\_\+giveup@{print\+\_\+giveup}}
+\index{print\+\_\+giveup@{print\+\_\+giveup}!parser.\+c@{parser.\+c}}
+\subsubsection[{\texorpdfstring{print\+\_\+giveup(char $\ast$nome\+\_\+f)}{print_giveup(char *nome_f)}}]{\setlength{\rightskip}{0pt plus 5cm}void print\+\_\+giveup (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{nome\+\_\+f}
+\end{DoxyParamCaption}
+)}\hypertarget{parser_8c_a96753bedfc088311858a4303ac7cd4a1}{}\label{parser_8c_a96753bedfc088311858a4303ac7cd4a1}
+
+
+Função que imprime o butão \char`\"{}\+Give Up\char`\"{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nome\+\_\+f} & Nome do ficheiro/jogador. \\
+\hline
+\end{DoxyParams}
+\index{parser.\+c@{parser.\+c}!print\+\_\+help@{print\+\_\+help}}
+\index{print\+\_\+help@{print\+\_\+help}!parser.\+c@{parser.\+c}}
+\subsubsection[{\texorpdfstring{print\+\_\+help(\+E\+S\+T\+A\+D\+O e, char $\ast$nome\+\_\+f)}{print_help(ESTADO e, char *nome_f)}}]{\setlength{\rightskip}{0pt plus 5cm}void print\+\_\+help (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+S\+T\+A\+DO}}]{e, }
+\item[{char $\ast$}]{nome\+\_\+f}
+\end{DoxyParamCaption}
+)}\hypertarget{parser_8c_a3b811fbec3f5400fb4ed0b89799823b3}{}\label{parser_8c_a3b811fbec3f5400fb4ed0b89799823b3}
+
+
+Função que imprime o \char`\"{}\+How To Play\char`\"{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Estado atual do jogo. \\
+\hline
+{\em nome\+\_\+f} & Nome do ficheiro/jogador. \\
+\hline
+\end{DoxyParams}
+\index{parser.\+c@{parser.\+c}!print\+\_\+highscores@{print\+\_\+highscores}}
+\index{print\+\_\+highscores@{print\+\_\+highscores}!parser.\+c@{parser.\+c}}
+\subsubsection[{\texorpdfstring{print\+\_\+highscores(\+E\+S\+T\+A\+D\+O e, char $\ast$nome\+\_\+f)}{print_highscores(ESTADO e, char *nome_f)}}]{\setlength{\rightskip}{0pt plus 5cm}void print\+\_\+highscores (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+S\+T\+A\+DO}}]{e, }
+\item[{char $\ast$}]{nome\+\_\+f}
+\end{DoxyParamCaption}
+)}\hypertarget{parser_8c_a2d722b23cf171d217c975ca4c8a9c331}{}\label{parser_8c_a2d722b23cf171d217c975ca4c8a9c331}
+
+
+Função que imprime o array dos highscores. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Estado de jogo atual. \\
+\hline
+{\em nome\+\_\+f} & Nome do ficheiro/jogador. \\
+\hline
+\end{DoxyParams}
+\index{parser.\+c@{parser.\+c}!print\+\_\+hints@{print\+\_\+hints}}
+\index{print\+\_\+hints@{print\+\_\+hints}!parser.\+c@{parser.\+c}}
+\subsubsection[{\texorpdfstring{print\+\_\+hints(\+E\+S\+T\+A\+D\+O e, char $\ast$nome\+\_\+f)}{print_hints(ESTADO e, char *nome_f)}}]{\setlength{\rightskip}{0pt plus 5cm}void print\+\_\+hints (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+S\+T\+A\+DO}}]{e, }
+\item[{char $\ast$}]{nome\+\_\+f}
+\end{DoxyParamCaption}
+)}\hypertarget{parser_8c_aea767e7e8f73612bf5ea5cf638a85a77}{}\label{parser_8c_aea767e7e8f73612bf5ea5cf638a85a77}
+
+
+Função que imprime o quadrado com as ajudas. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Estado atual do jogo. \\
+\hline
+{\em nome\+\_\+f} & Nome do ficheiro/jogador. \\
+\hline
+\end{DoxyParams}
+\index{parser.\+c@{parser.\+c}!print\+\_\+howtoplay@{print\+\_\+howtoplay}}
+\index{print\+\_\+howtoplay@{print\+\_\+howtoplay}!parser.\+c@{parser.\+c}}
+\subsubsection[{\texorpdfstring{print\+\_\+howtoplay(\+E\+S\+T\+A\+D\+O e, char $\ast$nome\+\_\+f)}{print_howtoplay(ESTADO e, char *nome_f)}}]{\setlength{\rightskip}{0pt plus 5cm}void print\+\_\+howtoplay (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+S\+T\+A\+DO}}]{e, }
+\item[{char $\ast$}]{nome\+\_\+f}
+\end{DoxyParamCaption}
+)}\hypertarget{parser_8c_a2964b0ac7f00e51b4d36ae9d0058ce34}{}\label{parser_8c_a2964b0ac7f00e51b4d36ae9d0058ce34}
+
+
+Função que imprime o \char`\"{}\+How To Play\char`\"{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Estado de jogo atual. \\
+\hline
+{\em nome\+\_\+f} & Nome do ficheiro/jogador. \\
+\hline
+\end{DoxyParams}
+\index{parser.\+c@{parser.\+c}!print\+\_\+image@{print\+\_\+image}}
+\index{print\+\_\+image@{print\+\_\+image}!parser.\+c@{parser.\+c}}
+\subsubsection[{\texorpdfstring{print\+\_\+image(int px, int py, int tam, char $\ast$imagem)}{print_image(int px, int py, int tam, char *imagem)}}]{\setlength{\rightskip}{0pt plus 5cm}void print\+\_\+image (
+\begin{DoxyParamCaption}
+\item[{int}]{px, }
+\item[{int}]{py, }
+\item[{int}]{tam, }
+\item[{char $\ast$}]{imagem}
+\end{DoxyParamCaption}
+)}\hypertarget{parser_8c_a349d7ef7aebbc7de2b9ed8c718c638cf}{}\label{parser_8c_a349d7ef7aebbc7de2b9ed8c718c638cf}
+
+
+Função que imprime uma imagem. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em px} & Posição da imagem em x. \\
+\hline
+{\em py} & Posição da imagem em y. \\
+\hline
+{\em tam} & Tamanho da imagem. \\
+\hline
+{\em imagem} & Imagem a ser imprimida. \\
+\hline
+\end{DoxyParams}
+\index{parser.\+c@{parser.\+c}!print\+\_\+imagem@{print\+\_\+imagem}}
+\index{print\+\_\+imagem@{print\+\_\+imagem}!parser.\+c@{parser.\+c}}
+\subsubsection[{\texorpdfstring{print\+\_\+imagem(int x, int y, int w, int h, char $\ast$imagem)}{print_imagem(int x, int y, int w, int h, char *imagem)}}]{\setlength{\rightskip}{0pt plus 5cm}void print\+\_\+imagem (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{int}]{w, }
+\item[{int}]{h, }
+\item[{char $\ast$}]{imagem}
+\end{DoxyParamCaption}
+)}\hypertarget{parser_8c_a54abe09ab42298d18868fc2334129b0e}{}\label{parser_8c_a54abe09ab42298d18868fc2334129b0e}
+
+
+Função que imprime uma imagem. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Posição da imagem em x. \\
+\hline
+{\em y} & Posição da imagem em y. \\
+\hline
+{\em w} & Largura da imagem. \\
+\hline
+{\em h} & Comprimento do retângulo. \\
+\hline
+{\em imagem} & Imagem a ser impressa. \\
+\hline
+\end{DoxyParams}
+\index{parser.\+c@{parser.\+c}!print\+\_\+info@{print\+\_\+info}}
+\index{print\+\_\+info@{print\+\_\+info}!parser.\+c@{parser.\+c}}
+\subsubsection[{\texorpdfstring{print\+\_\+info(\+E\+S\+T\+A\+D\+O e)}{print_info(ESTADO e)}}]{\setlength{\rightskip}{0pt plus 5cm}void print\+\_\+info (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+S\+T\+A\+DO}}]{e}
+\end{DoxyParamCaption}
+)}\hypertarget{parser_8c_a7d3c3d3dc33dad5de63230e088bd0be1}{}\label{parser_8c_a7d3c3d3dc33dad5de63230e088bd0be1}
+
+
+Função que imprime as informações do jogador (estado e vida). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Estado atual do jogo. \\
+\hline
+\end{DoxyParams}
+\index{parser.\+c@{parser.\+c}!print\+\_\+jogo@{print\+\_\+jogo}}
+\index{print\+\_\+jogo@{print\+\_\+jogo}!parser.\+c@{parser.\+c}}
+\subsubsection[{\texorpdfstring{print\+\_\+jogo(\+E\+S\+T\+A\+D\+O e, char $\ast$nome\+\_\+f, int acao, int coordx, int coordy)}{print_jogo(ESTADO e, char *nome_f, int acao, int coordx, int coordy)}}]{\setlength{\rightskip}{0pt plus 5cm}void print\+\_\+jogo (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+S\+T\+A\+DO}}]{e, }
+\item[{char $\ast$}]{nome\+\_\+f, }
+\item[{int}]{acao, }
+\item[{int}]{coordx, }
+\item[{int}]{coordy}
+\end{DoxyParamCaption}
+)}\hypertarget{parser_8c_a73e03493991ea831766582e299b02cdb}{}\label{parser_8c_a73e03493991ea831766582e299b02cdb}
+
+
+Função que imprime o jogo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Estado atual do jogo. \\
+\hline
+{\em nome\+\_\+f} & Nome do ficheiro/jogador. \\
+\hline
+{\em acao} & Ação. \\
+\hline
+{\em coordx} & Coordenada dos x. \\
+\hline
+{\em coordy} & Coordenada dos y. \\
+\hline
+\end{DoxyParams}
+\index{parser.\+c@{parser.\+c}!print\+\_\+level@{print\+\_\+level}}
+\index{print\+\_\+level@{print\+\_\+level}!parser.\+c@{parser.\+c}}
+\subsubsection[{\texorpdfstring{print\+\_\+level(\+E\+S\+T\+A\+D\+O e)}{print_level(ESTADO e)}}]{\setlength{\rightskip}{0pt plus 5cm}void print\+\_\+level (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+S\+T\+A\+DO}}]{e}
+\end{DoxyParamCaption}
+)}\hypertarget{parser_8c_a75a1c7d5f52477b993cc7d17b9b96ffe}{}\label{parser_8c_a75a1c7d5f52477b993cc7d17b9b96ffe}
+
+
+Função que imprime o nível do jogo atual. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Estado atual do jogo. \\
+\hline
+\end{DoxyParams}
+\index{parser.\+c@{parser.\+c}!print\+\_\+lostlife@{print\+\_\+lostlife}}
+\index{print\+\_\+lostlife@{print\+\_\+lostlife}!parser.\+c@{parser.\+c}}
+\subsubsection[{\texorpdfstring{print\+\_\+lostlife(\+E\+S\+T\+A\+D\+O e, char $\ast$nome\+\_\+f)}{print_lostlife(ESTADO e, char *nome_f)}}]{\setlength{\rightskip}{0pt plus 5cm}void print\+\_\+lostlife (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+S\+T\+A\+DO}}]{e, }
+\item[{char $\ast$}]{nome\+\_\+f}
+\end{DoxyParamCaption}
+)}\hypertarget{parser_8c_abf022e03c668bfc966ba834b30c586d5}{}\label{parser_8c_abf022e03c668bfc966ba834b30c586d5}
+
+
+Função que imprime o aviso \char`\"{}\+You have lost 1 life.\char`\"{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Estado atual do jogo. \\
+\hline
+{\em nome\+\_\+f} & Nome do ficheiro/jogador. \\
+\hline
+\end{DoxyParams}
+\index{parser.\+c@{parser.\+c}!print\+\_\+menu@{print\+\_\+menu}}
+\index{print\+\_\+menu@{print\+\_\+menu}!parser.\+c@{parser.\+c}}
+\subsubsection[{\texorpdfstring{print\+\_\+menu(char $\ast$nome\+\_\+f)}{print_menu(char *nome_f)}}]{\setlength{\rightskip}{0pt plus 5cm}void print\+\_\+menu (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{nome\+\_\+f}
+\end{DoxyParamCaption}
+)}\hypertarget{parser_8c_a0e405b96ad090553c3710dfe4b42ee0e}{}\label{parser_8c_a0e405b96ad090553c3710dfe4b42ee0e}
+
+
+Função que imprime o menu do jogo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nome\+\_\+f} & Nome do ficheiro/jogador. \\
+\hline
+\end{DoxyParams}
+\index{parser.\+c@{parser.\+c}!print\+\_\+monsterinfo@{print\+\_\+monsterinfo}}
+\index{print\+\_\+monsterinfo@{print\+\_\+monsterinfo}!parser.\+c@{parser.\+c}}
+\subsubsection[{\texorpdfstring{print\+\_\+monsterinfo(\+E\+S\+T\+A\+D\+O e, char $\ast$nome\+\_\+f)}{print_monsterinfo(ESTADO e, char *nome_f)}}]{\setlength{\rightskip}{0pt plus 5cm}void print\+\_\+monsterinfo (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+S\+T\+A\+DO}}]{e, }
+\item[{char $\ast$}]{nome\+\_\+f}
+\end{DoxyParamCaption}
+)}\hypertarget{parser_8c_ae46b8c7c7dcf2666a9800cc6f3215d6d}{}\label{parser_8c_ae46b8c7c7dcf2666a9800cc6f3215d6d}
+
+
+Função que imprime o botão \char`\"{}\+Monster Info\char`\"{} com as info dos monstros. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Estado atual de jogo. \\
+\hline
+{\em nome\+\_\+f} & Nome do ficheiro/jogador. \\
+\hline
+\end{DoxyParams}
+\index{parser.\+c@{parser.\+c}!print\+\_\+move@{print\+\_\+move}}
+\index{print\+\_\+move@{print\+\_\+move}!parser.\+c@{parser.\+c}}
+\subsubsection[{\texorpdfstring{print\+\_\+move(\+E\+S\+T\+A\+D\+O e, int d\+X, int d\+Y, char $\ast$nome\+\_\+f)}{print_move(ESTADO e, int dX, int dY, char *nome_f)}}]{\setlength{\rightskip}{0pt plus 5cm}void print\+\_\+move (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+S\+T\+A\+DO}}]{e, }
+\item[{int}]{dX, }
+\item[{int}]{dY, }
+\item[{char $\ast$}]{nome\+\_\+f}
+\end{DoxyParamCaption}
+)}\hypertarget{parser_8c_ad4234bb85e0ca5eb0cf802cf8ac2f739}{}\label{parser_8c_ad4234bb85e0ca5eb0cf802cf8ac2f739}
+
+
+Função que imprime os movimentos e ações. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Estado atual do jogo. \\
+\hline
+{\em dX} & Distância entre a posição do jogador e a nova posição no eixo dos x. \\
+\hline
+{\em dY} & Distância entre a posição do jogador e a nova posição no eixo dos y. \\
+\hline
+{\em nome\+\_\+f} & Nome do ficheiro/jogador. \\
+\hline
+\end{DoxyParams}
+\index{parser.\+c@{parser.\+c}!print\+\_\+player@{print\+\_\+player}}
+\index{print\+\_\+player@{print\+\_\+player}!parser.\+c@{parser.\+c}}
+\subsubsection[{\texorpdfstring{print\+\_\+player(\+E\+S\+T\+A\+D\+O e, char $\ast$nome\+\_\+f)}{print_player(ESTADO e, char *nome_f)}}]{\setlength{\rightskip}{0pt plus 5cm}void print\+\_\+player (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+S\+T\+A\+DO}}]{e, }
+\item[{char $\ast$}]{nome\+\_\+f}
+\end{DoxyParamCaption}
+)}\hypertarget{parser_8c_a9e3feb3f516c5292e90aef7058b37ed0}{}\label{parser_8c_a9e3feb3f516c5292e90aef7058b37ed0}
+
+
+Função que imprime o jogador. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Estado atual do jogo. \\
+\hline
+{\em nome\+\_\+f} & Nome do ficheiro/jogador. \\
+\hline
+\end{DoxyParams}
+\index{parser.\+c@{parser.\+c}!print\+\_\+plus@{print\+\_\+plus}}
+\index{print\+\_\+plus@{print\+\_\+plus}!parser.\+c@{parser.\+c}}
+\subsubsection[{\texorpdfstring{print\+\_\+plus(\+E\+S\+T\+A\+D\+O e)}{print_plus(ESTADO e)}}]{\setlength{\rightskip}{0pt plus 5cm}void print\+\_\+plus (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+S\+T\+A\+DO}}]{e}
+\end{DoxyParamCaption}
+)}\hypertarget{parser_8c_aedd37a524f8f2d4937b677067922af7e}{}\label{parser_8c_aedd37a524f8f2d4937b677067922af7e}
+
+
+Função que o bónus de apanhar uma vida. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Estado atual do jogo. \\
+\hline
+\end{DoxyParams}
+\index{parser.\+c@{parser.\+c}!print\+\_\+powerup@{print\+\_\+powerup}}
+\index{print\+\_\+powerup@{print\+\_\+powerup}!parser.\+c@{parser.\+c}}
+\subsubsection[{\texorpdfstring{print\+\_\+powerup(\+E\+S\+T\+A\+D\+O e)}{print_powerup(ESTADO e)}}]{\setlength{\rightskip}{0pt plus 5cm}void print\+\_\+powerup (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+S\+T\+A\+DO}}]{e}
+\end{DoxyParamCaption}
+)}\hypertarget{parser_8c_aad1bfdae0d1d597cebf3e0ce9acac469}{}\label{parser_8c_aad1bfdae0d1d597cebf3e0ce9acac469}
+
+
+Função que imprime um powerup. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Estado atual do jogo. \\
+\hline
+\end{DoxyParams}
+\index{parser.\+c@{parser.\+c}!print\+\_\+range@{print\+\_\+range}}
+\index{print\+\_\+range@{print\+\_\+range}!parser.\+c@{parser.\+c}}
+\subsubsection[{\texorpdfstring{print\+\_\+range(\+E\+S\+T\+A\+D\+O e, int i, int dx, int dy)}{print_range(ESTADO e, int i, int dx, int dy)}}]{\setlength{\rightskip}{0pt plus 5cm}void print\+\_\+range (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+S\+T\+A\+DO}}]{e, }
+\item[{int}]{i, }
+\item[{int}]{dx, }
+\item[{int}]{dy}
+\end{DoxyParamCaption}
+)}\hypertarget{parser_8c_a03f767592caf3c2eac9976994cfc509b}{}\label{parser_8c_a03f767592caf3c2eac9976994cfc509b}
+
+
+Função que, dada uma posição relativa, mostra se o inimigo pode atacar essa casa. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Estado atual do jogo. \\
+\hline
+{\em i} & Índice do inimigo. \\
+\hline
+{\em dx} & Diferença no x. \\
+\hline
+{\em dy} & Diferença no y. \\
+\hline
+\end{DoxyParams}
+\index{parser.\+c@{parser.\+c}!print\+\_\+rect@{print\+\_\+rect}}
+\index{print\+\_\+rect@{print\+\_\+rect}!parser.\+c@{parser.\+c}}
+\subsubsection[{\texorpdfstring{print\+\_\+rect(int x, int y, int w, int h, char $\ast$cor, float o)}{print_rect(int x, int y, int w, int h, char *cor, float o)}}]{\setlength{\rightskip}{0pt plus 5cm}void print\+\_\+rect (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{int}]{w, }
+\item[{int}]{h, }
+\item[{char $\ast$}]{cor, }
+\item[{float}]{o}
+\end{DoxyParamCaption}
+)}\hypertarget{parser_8c_aab0420d96d59fa2605bb4dbc61985373}{}\label{parser_8c_aab0420d96d59fa2605bb4dbc61985373}
+
+
+Função que imprime um retângulo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Posição do retângulo em x. \\
+\hline
+{\em y} & Posição do retângulo em y. \\
+\hline
+{\em w} & Largura do retângulo. \\
+\hline
+{\em h} & Comprimento do retângulo. \\
+\hline
+{\em cor} & Cor do retângulo. \\
+\hline
+{\em o} & Opacidade do retângulo. \\
+\hline
+\end{DoxyParams}
+\index{parser.\+c@{parser.\+c}!print\+\_\+score@{print\+\_\+score}}
+\index{print\+\_\+score@{print\+\_\+score}!parser.\+c@{parser.\+c}}
+\subsubsection[{\texorpdfstring{print\+\_\+score(\+E\+S\+T\+A\+D\+O e)}{print_score(ESTADO e)}}]{\setlength{\rightskip}{0pt plus 5cm}void print\+\_\+score (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+S\+T\+A\+DO}}]{e}
+\end{DoxyParamCaption}
+)}\hypertarget{parser_8c_ae8ff332e4c5a5b0387c8acffef6ad64a}{}\label{parser_8c_ae8ff332e4c5a5b0387c8acffef6ad64a}
+
+
+Função que imprime o score atual. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Estado atual do jogo. \\
+\hline
+\end{DoxyParams}
+\index{parser.\+c@{parser.\+c}!print\+\_\+select\+\_\+specific@{print\+\_\+select\+\_\+specific}}
+\index{print\+\_\+select\+\_\+specific@{print\+\_\+select\+\_\+specific}!parser.\+c@{parser.\+c}}
+\subsubsection[{\texorpdfstring{print\+\_\+select\+\_\+specific(\+E\+S\+T\+A\+D\+O e, char $\ast$nome\+\_\+f)}{print_select_specific(ESTADO e, char *nome_f)}}]{\setlength{\rightskip}{0pt plus 5cm}void print\+\_\+select\+\_\+specific (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+S\+T\+A\+DO}}]{e, }
+\item[{char $\ast$}]{nome\+\_\+f}
+\end{DoxyParamCaption}
+)}\hypertarget{parser_8c_aab3d679b141414960e615619611e7098}{}\label{parser_8c_aab3d679b141414960e615619611e7098}
+
+
+Função que permite selecionar um inimigo específico para ver o ser alcance de ataque. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Estado atual do jogo. \\
+\hline
+{\em nome\+\_\+f} & Nome do ficheiro/jogador. \\
+\hline
+\end{DoxyParams}
+\index{parser.\+c@{parser.\+c}!print\+\_\+show\+\_\+range@{print\+\_\+show\+\_\+range}}
+\index{print\+\_\+show\+\_\+range@{print\+\_\+show\+\_\+range}!parser.\+c@{parser.\+c}}
+\subsubsection[{\texorpdfstring{print\+\_\+show\+\_\+range(\+E\+S\+T\+A\+D\+O e, char $\ast$nome\+\_\+f)}{print_show_range(ESTADO e, char *nome_f)}}]{\setlength{\rightskip}{0pt plus 5cm}void print\+\_\+show\+\_\+range (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+S\+T\+A\+DO}}]{e, }
+\item[{char $\ast$}]{nome\+\_\+f}
+\end{DoxyParamCaption}
+)}\hypertarget{parser_8c_abad3d03c10a544e0e040b409fd12ef28}{}\label{parser_8c_abad3d03c10a544e0e040b409fd12ef28}
+
+
+Função que permite ativar/desativar a ajuda de mostrar o range de todos os inimigos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Estado atual do jogo. \\
+\hline
+{\em nome\+\_\+f} & Nome do ficheiro/jogador. \\
+\hline
+\end{DoxyParams}
+\index{parser.\+c@{parser.\+c}!print\+\_\+show\+\_\+range\+\_\+specific@{print\+\_\+show\+\_\+range\+\_\+specific}}
+\index{print\+\_\+show\+\_\+range\+\_\+specific@{print\+\_\+show\+\_\+range\+\_\+specific}!parser.\+c@{parser.\+c}}
+\subsubsection[{\texorpdfstring{print\+\_\+show\+\_\+range\+\_\+specific(\+E\+S\+T\+A\+D\+O e, char $\ast$nome\+\_\+f)}{print_show_range_specific(ESTADO e, char *nome_f)}}]{\setlength{\rightskip}{0pt plus 5cm}void print\+\_\+show\+\_\+range\+\_\+specific (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+S\+T\+A\+DO}}]{e, }
+\item[{char $\ast$}]{nome\+\_\+f}
+\end{DoxyParamCaption}
+)}\hypertarget{parser_8c_a09f0f55035c7bdd3023e3c9025e916ba}{}\label{parser_8c_a09f0f55035c7bdd3023e3c9025e916ba}
+
+
+Função que permite ativar/desativar a ajuda de mostrar o range de um inimigo em específico. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Estado atual do jogo. \\
+\hline
+{\em nome\+\_\+f} & Nome do ficheiro/jogador. \\
+\hline
+\end{DoxyParams}
+\index{parser.\+c@{parser.\+c}!print\+\_\+square@{print\+\_\+square}}
+\index{print\+\_\+square@{print\+\_\+square}!parser.\+c@{parser.\+c}}
+\subsubsection[{\texorpdfstring{print\+\_\+square(int px, int py, int tam)}{print_square(int px, int py, int tam)}}]{\setlength{\rightskip}{0pt plus 5cm}void print\+\_\+square (
+\begin{DoxyParamCaption}
+\item[{int}]{px, }
+\item[{int}]{py, }
+\item[{int}]{tam}
+\end{DoxyParamCaption}
+)}\hypertarget{parser_8c_a489d92a251650492415491f7d7b15ffc}{}\label{parser_8c_a489d92a251650492415491f7d7b15ffc}
+
+
+Função que imprime os quadrados do tabuleiro. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em px} & Posição no eixo dos x. \\
+\hline
+{\em py} & Posição no eixo dos y. \\
+\hline
+{\em tam} & Tamanho da imagem \\
+\hline
+\end{DoxyParams}
+\index{parser.\+c@{parser.\+c}!print\+\_\+state@{print\+\_\+state}}
+\index{print\+\_\+state@{print\+\_\+state}!parser.\+c@{parser.\+c}}
+\subsubsection[{\texorpdfstring{print\+\_\+state(\+E\+S\+T\+A\+D\+O e)}{print_state(ESTADO e)}}]{\setlength{\rightskip}{0pt plus 5cm}void print\+\_\+state (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+S\+T\+A\+DO}}]{e}
+\end{DoxyParamCaption}
+)}\hypertarget{parser_8c_ab7a82b76c22f4df94e8a629c7b60cb32}{}\label{parser_8c_ab7a82b76c22f4df94e8a629c7b60cb32}
+
+
+Função que imprime o estado do jogador, i.\+e, se estiver com powerups. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Estado atual do jogo. \\
+\hline
+\end{DoxyParams}
+\index{parser.\+c@{parser.\+c}!print\+\_\+text@{print\+\_\+text}}
+\index{print\+\_\+text@{print\+\_\+text}!parser.\+c@{parser.\+c}}
+\subsubsection[{\texorpdfstring{print\+\_\+text(int x, int y, int f, char $\ast$cor, char $\ast$texto)}{print_text(int x, int y, int f, char *cor, char *texto)}}]{\setlength{\rightskip}{0pt plus 5cm}void print\+\_\+text (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{int}]{f, }
+\item[{char $\ast$}]{cor, }
+\item[{char $\ast$}]{texto}
+\end{DoxyParamCaption}
+)}\hypertarget{parser_8c_a6b6dac740258f8950b17dcd40bff1154}{}\label{parser_8c_a6b6dac740258f8950b17dcd40bff1154}
+
+
+Função que imprime texto. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Posição do texto em x. \\
+\hline
+{\em y} & Posição do texto em y. \\
+\hline
+{\em f} & Tamanho da fonte. \\
+\hline
+{\em cor} & Cor da fonte. \\
+\hline
+{\em texto} & Texto a ser imprimido. \\
+\hline
+\end{DoxyParams}
+\index{parser.\+c@{parser.\+c}!print\+\_\+vida@{print\+\_\+vida}}
+\index{print\+\_\+vida@{print\+\_\+vida}!parser.\+c@{parser.\+c}}
+\subsubsection[{\texorpdfstring{print\+\_\+vida(\+E\+S\+T\+A\+D\+O e)}{print_vida(ESTADO e)}}]{\setlength{\rightskip}{0pt plus 5cm}void print\+\_\+vida (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+S\+T\+A\+DO}}]{e}
+\end{DoxyParamCaption}
+)}\hypertarget{parser_8c_a5d4aaef5f27a4ab891c6a6cb318d119a}{}\label{parser_8c_a5d4aaef5f27a4ab891c6a6cb318d119a}
+
+
+Função que imprime as vidas do jogador. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Estado atual do jogo. \\
+\hline
+\end{DoxyParams}
+\index{parser.\+c@{parser.\+c}!print\+\_\+wall@{print\+\_\+wall}}
+\index{print\+\_\+wall@{print\+\_\+wall}!parser.\+c@{parser.\+c}}
+\subsubsection[{\texorpdfstring{print\+\_\+wall(\+E\+S\+T\+A\+D\+O e, int i)}{print_wall(ESTADO e, int i)}}]{\setlength{\rightskip}{0pt plus 5cm}void print\+\_\+wall (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+S\+T\+A\+DO}}]{e, }
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)}\hypertarget{parser_8c_ab5839f11c8cab1986ea99746784e313b}{}\label{parser_8c_ab5839f11c8cab1986ea99746784e313b}
+
+
+Função que imprime um certo obstáculo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Estado atual do jogo. \\
+\hline
+{\em i} & Índice da porta. \\
+\hline
+\end{DoxyParams}
+\index{parser.\+c@{parser.\+c}!print\+\_\+walls@{print\+\_\+walls}}
+\index{print\+\_\+walls@{print\+\_\+walls}!parser.\+c@{parser.\+c}}
+\subsubsection[{\texorpdfstring{print\+\_\+walls(\+E\+S\+T\+A\+D\+O e)}{print_walls(ESTADO e)}}]{\setlength{\rightskip}{0pt plus 5cm}void print\+\_\+walls (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+S\+T\+A\+DO}}]{e}
+\end{DoxyParamCaption}
+)}\hypertarget{parser_8c_a223df6d5d95a9a235f04b505c07140f0}{}\label{parser_8c_a223df6d5d95a9a235f04b505c07140f0}
+
+
+Funnção que imprime os obstáculos. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Estado atual do jogo. \\
+\hline
+\end{DoxyParams}
+\index{parser.\+c@{parser.\+c}!processar\+\_\+acao@{processar\+\_\+acao}}
+\index{processar\+\_\+acao@{processar\+\_\+acao}!parser.\+c@{parser.\+c}}
+\subsubsection[{\texorpdfstring{processar\+\_\+acao(\+E\+S\+T\+A\+D\+O e, char $\ast$nome\+\_\+f, int acao, int coordx, int coordy)}{processar_acao(ESTADO e, char *nome_f, int acao, int coordx, int coordy)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+S\+T\+A\+DO} processar\+\_\+acao (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+S\+T\+A\+DO}}]{e, }
+\item[{char $\ast$}]{nome\+\_\+f, }
+\item[{int}]{acao, }
+\item[{int}]{coordx, }
+\item[{int}]{coordy}
+\end{DoxyParamCaption}
+)}\hypertarget{parser_8c_ab1eae3ada87ddfa0afadefb9c4382f49}{}\label{parser_8c_ab1eae3ada87ddfa0afadefb9c4382f49}
+
+
+Função que processa ação recebida. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Estado de jogo atual. \\
+\hline
+{\em nome\+\_\+f} & Nome do ficheiro/jogador. \\
+\hline
+{\em acao} & Ação. \\
+\hline
+{\em coordx} & Coordenada no eixo dos x. \\
+\hline
+{\em coordy} & Coordenada no eixo dos y. \\
+\hline
+\end{DoxyParams}
+\index{parser.\+c@{parser.\+c}!rangefeiticeiro@{rangefeiticeiro}}
+\index{rangefeiticeiro@{rangefeiticeiro}!parser.\+c@{parser.\+c}}
+\subsubsection[{\texorpdfstring{rangefeiticeiro(\+E\+S\+T\+A\+D\+O e, int x, int y, int i)}{rangefeiticeiro(ESTADO e, int x, int y, int i)}}]{\setlength{\rightskip}{0pt plus 5cm}int rangefeiticeiro (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+S\+T\+A\+DO}}]{e, }
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)}\hypertarget{parser_8c_ae29f4b81feae934ea2738299ee0cf2ba}{}\label{parser_8c_ae29f4b81feae934ea2738299ee0cf2ba}
+
+
+Função que verifica se um inimigo do tipo feiticeiro está em range para matar um jogador. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Estado atual do jogo. \\
+\hline
+{\em x} & Coordenada no eixo dos x do jogador. \\
+\hline
+{\em y} & Coordenada no eixo dos y do jogador. \\
+\hline
+{\em i} & Índice do inimigo em questão. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna 1, verdadeiro, ou 0,falso. 
+\end{DoxyReturn}
+\index{parser.\+c@{parser.\+c}!rangejogador@{rangejogador}}
+\index{rangejogador@{rangejogador}!parser.\+c@{parser.\+c}}
+\subsubsection[{\texorpdfstring{rangejogador(\+E\+S\+T\+A\+D\+O e, int x, int y, int i)}{rangejogador(ESTADO e, int x, int y, int i)}}]{\setlength{\rightskip}{0pt plus 5cm}int rangejogador (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+S\+T\+A\+DO}}]{e, }
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{int}]{i}
+\end{DoxyParamCaption}
+)}\hypertarget{parser_8c_a5b36f538702dfae612f512abb6c5aaea}{}\label{parser_8c_a5b36f538702dfae612f512abb6c5aaea}
+
+
+Função que verifica se um inimigo está em range para matar um jogador. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Estado atual do jogo. \\
+\hline
+{\em x} & Coordenada no eixo dos x do jogador. \\
+\hline
+{\em y} & Coordenada no eixo dos y do jogador. \\
+\hline
+{\em i} & Índice do inimigo em questão. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna 1, verdadeiro, ou 0,falso. 
+\end{DoxyReturn}
+\index{parser.\+c@{parser.\+c}!wall\+\_\+index@{wall\+\_\+index}}
+\index{wall\+\_\+index@{wall\+\_\+index}!parser.\+c@{parser.\+c}}
+\subsubsection[{\texorpdfstring{wall\+\_\+index(\+E\+S\+T\+A\+D\+O e, int x, int y)}{wall_index(ESTADO e, int x, int y)}}]{\setlength{\rightskip}{0pt plus 5cm}int wall\+\_\+index (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+S\+T\+A\+DO}}]{e, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}\hypertarget{parser_8c_a8ebff9bb6f250835f68a09cc22ffd5b7}{}\label{parser_8c_a8ebff9bb6f250835f68a09cc22ffd5b7}
+
+
+Função que encontra o índice de um obstáculo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Estado atual do jogo. \\
+\hline
+{\em x} & Coordenada do eixo dos x. \\
+\hline
+{\em y} & Coordenada do eixo dos y. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Retorna o índice do obstáculo em (x,y) 
+\end{DoxyReturn}

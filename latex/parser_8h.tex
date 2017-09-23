@@ -1,0 +1,217 @@
+\hypertarget{parser_8h}{}\section{parser.\+h File Reference}
+\label{parser_8h}\index{parser.\+h@{parser.\+h}}
+This graph shows which files directly or indirectly include this file\+:
+% FIG 0
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{parser_8h_a70ed59adcb4159ac551058053e649640}{S\+I\+ZE}~10\hypertarget{parser_8h_a70ed59adcb4159ac551058053e649640}{}\label{parser_8h_a70ed59adcb4159ac551058053e649640}
+
+\begin{DoxyCompactList}\small\item\em O tamanho do mapa. \end{DoxyCompactList}\item 
+\#define \hyperlink{parser_8h_ae0b4816fb45161ef9da5e6d6134ee28a}{T\+AM}~60\hypertarget{parser_8h_ae0b4816fb45161ef9da5e6d6134ee28a}{}\label{parser_8h_ae0b4816fb45161ef9da5e6d6134ee28a}
+
+\begin{DoxyCompactList}\small\item\em O tamanho dos quadrados do mapa. \end{DoxyCompactList}\item 
+\#define \hyperlink{parser_8h_aba1db26a3ac1131132cebb93ecd16b0a}{N\+U\+M\+\_\+\+I\+N\+I\+M\+I\+G\+OS}~10\hypertarget{parser_8h_aba1db26a3ac1131132cebb93ecd16b0a}{}\label{parser_8h_aba1db26a3ac1131132cebb93ecd16b0a}
+
+\begin{DoxyCompactList}\small\item\em O nº inicial de inimigos. \end{DoxyCompactList}\item 
+\#define \hyperlink{parser_8h_a5a8b96b2bccf520382f4622bd40db43a}{N\+U\+M\+\_\+\+W\+A\+L\+LS}~20\hypertarget{parser_8h_a5a8b96b2bccf520382f4622bd40db43a}{}\label{parser_8h_a5a8b96b2bccf520382f4622bd40db43a}
+
+\begin{DoxyCompactList}\small\item\em O nº inicial de obstáculos. \end{DoxyCompactList}\item 
+\#define \hyperlink{parser_8h_aad83b5ec5f8d43384c666cf26865aaea}{P\+L\+A\+Y\+ER}~\char`\"{}http\+://127.\+0.\+0.\+1/player.\+png\char`\"{}\hypertarget{parser_8h_aad83b5ec5f8d43384c666cf26865aaea}{}\label{parser_8h_aad83b5ec5f8d43384c666cf26865aaea}
+
+\begin{DoxyCompactList}\small\item\em A imagem do jogador no estado normal. \end{DoxyCompactList}\item 
+\#define \hyperlink{parser_8h_aff32b2add5186520b5ae86864ebaf51a}{P\+L\+A\+Y\+E\+R1}~\char`\"{}http\+://127.\+0.\+0.\+1/marioranged.\+png\char`\"{}\hypertarget{parser_8h_aff32b2add5186520b5ae86864ebaf51a}{}\label{parser_8h_aff32b2add5186520b5ae86864ebaf51a}
+
+\begin{DoxyCompactList}\small\item\em A imagem do jogador no modo ranged. \end{DoxyCompactList}\item 
+\#define \hyperlink{parser_8h_a7a2041512655fbd01e15d4516f7fb7cc}{P\+L\+A\+Y\+E\+R2}~\char`\"{}http\+://127.\+0.\+0.\+1/mariodestruir.\+png\char`\"{}\hypertarget{parser_8h_a7a2041512655fbd01e15d4516f7fb7cc}{}\label{parser_8h_a7a2041512655fbd01e15d4516f7fb7cc}
+
+\begin{DoxyCompactList}\small\item\em A imagem do jogador no modo de destruir obstáculos. \end{DoxyCompactList}\item 
+\#define \hyperlink{parser_8h_a2992603a5f60b0da78add837d283d16b}{P\+L\+A\+Y\+E\+R3}~\char`\"{}http\+://127.\+0.\+0.\+1/mariovoar.\+png\char`\"{}\hypertarget{parser_8h_a2992603a5f60b0da78add837d283d16b}{}\label{parser_8h_a2992603a5f60b0da78add837d283d16b}
+
+\begin{DoxyCompactList}\small\item\em A imagem do jogador no modo de voar. \end{DoxyCompactList}\item 
+\#define \hyperlink{parser_8h_a39d7b2d2fae1ef23ab41ba7a5ab45202}{P\+L\+A\+Y\+E\+R4}~\char`\"{}http\+://127.\+0.\+0.\+1/mariobomb.\+png\char`\"{}\hypertarget{parser_8h_a39d7b2d2fae1ef23ab41ba7a5ab45202}{}\label{parser_8h_a39d7b2d2fae1ef23ab41ba7a5ab45202}
+
+\begin{DoxyCompactList}\small\item\em A imagem do jogador no modo bomba. \end{DoxyCompactList}\item 
+\#define \hyperlink{parser_8h_a78019500925dbe43a7d2d86ee214e358}{E\+N\+E\+M\+Y1}~\char`\"{}http\+://127.\+0.\+0.\+1/inimigo1.\+png\char`\"{}\hypertarget{parser_8h_a78019500925dbe43a7d2d86ee214e358}{}\label{parser_8h_a78019500925dbe43a7d2d86ee214e358}
+
+\begin{DoxyCompactList}\small\item\em A imagem dos inimigos melee. \end{DoxyCompactList}\item 
+\#define \hyperlink{parser_8h_a3940f377b507efe1c89c37bd275706ba}{E\+N\+E\+M\+Y2}~\char`\"{}http\+://127.\+0.\+0.\+1/inimigo2.\+png\char`\"{}\hypertarget{parser_8h_a3940f377b507efe1c89c37bd275706ba}{}\label{parser_8h_a3940f377b507efe1c89c37bd275706ba}
+
+\begin{DoxyCompactList}\small\item\em A imagem dos inimigos ranged. \end{DoxyCompactList}\item 
+\#define \hyperlink{parser_8h_a75610f50d0eb50f925b465a2c7092323}{E\+N\+E\+M\+Y3}~\char`\"{}http\+://127.\+0.\+0.\+1/inimigo3.\+png\char`\"{}\hypertarget{parser_8h_a75610f50d0eb50f925b465a2c7092323}{}\label{parser_8h_a75610f50d0eb50f925b465a2c7092323}
+
+\begin{DoxyCompactList}\small\item\em A imagem do \char`\"{}boss\char`\"{} que só morre com a bomba. \end{DoxyCompactList}\item 
+\#define \hyperlink{parser_8h_a3696273cee6177529e4cd68a0893e450}{E\+N\+E\+M\+Y4}~\char`\"{}http\+://127.\+0.\+0.\+1/inimigo4.\+png\char`\"{}\hypertarget{parser_8h_a3696273cee6177529e4cd68a0893e450}{}\label{parser_8h_a3696273cee6177529e4cd68a0893e450}
+
+\begin{DoxyCompactList}\small\item\em A imagem do \char`\"{}boss\char`\"{} que só morre com o fogo. \end{DoxyCompactList}\item 
+\#define \hyperlink{parser_8h_a1f7e76b982b6be6a3a524bafdcb076ae}{W\+A\+L\+L1}~\char`\"{}http\+://127.\+0.\+0.\+1/obstaculo1.\+png\char`\"{}\hypertarget{parser_8h_a1f7e76b982b6be6a3a524bafdcb076ae}{}\label{parser_8h_a1f7e76b982b6be6a3a524bafdcb076ae}
+
+\begin{DoxyCompactList}\small\item\em A imagem do obstáculo 1 (tijolo) \end{DoxyCompactList}\item 
+\#define \hyperlink{parser_8h_a6214308b78637a7c56f51f9f118eb32a}{W\+A\+L\+L2}~\char`\"{}http\+://127.\+0.\+0.\+1/obstaculo2.\+png\char`\"{}\hypertarget{parser_8h_a6214308b78637a7c56f51f9f118eb32a}{}\label{parser_8h_a6214308b78637a7c56f51f9f118eb32a}
+
+\begin{DoxyCompactList}\small\item\em A imagem do obstáculo 2 (tubo) \end{DoxyCompactList}\item 
+\#define \hyperlink{parser_8h_a6576c6210d7e26e5cebb3918a0436467}{W\+A\+L\+L3}~\char`\"{}http\+://127.\+0.\+0.\+1/obstaculo3.\+png\char`\"{}\hypertarget{parser_8h_a6576c6210d7e26e5cebb3918a0436467}{}\label{parser_8h_a6576c6210d7e26e5cebb3918a0436467}
+
+\begin{DoxyCompactList}\small\item\em A imagem do obstáculo 3 (pedra) \end{DoxyCompactList}\item 
+\#define \hyperlink{parser_8h_aa19093eb0aa5c5af9c27464ae8f0d2de}{D\+O\+OR}~\char`\"{}http\+://127.\+0.\+0.\+1/porta.\+png\char`\"{}\hypertarget{parser_8h_aa19093eb0aa5c5af9c27464ae8f0d2de}{}\label{parser_8h_aa19093eb0aa5c5af9c27464ae8f0d2de}
+
+\begin{DoxyCompactList}\small\item\em A imagem da \char`\"{}porta\char`\"{} (princesa) \end{DoxyCompactList}\item 
+\#define \hyperlink{parser_8h_abe0ec1d45aab5f79cf2ea355a5869890}{B\+O\+M\+BA}~\char`\"{}http\+://127.\+0.\+0.\+1/bomba.\+png\char`\"{}\hypertarget{parser_8h_abe0ec1d45aab5f79cf2ea355a5869890}{}\label{parser_8h_abe0ec1d45aab5f79cf2ea355a5869890}
+
+\begin{DoxyCompactList}\small\item\em A imagem da bomba de destuição dos obstáculos. \end{DoxyCompactList}\item 
+\#define \hyperlink{parser_8h_a1082f0d0b3b2f687958ea044cb0cd306}{F\+L\+O\+OR}~\char`\"{}http\+://127.\+0.\+0.\+1/chao.\+png\char`\"{}\hypertarget{parser_8h_a1082f0d0b3b2f687958ea044cb0cd306}{}\label{parser_8h_a1082f0d0b3b2f687958ea044cb0cd306}
+
+\begin{DoxyCompactList}\small\item\em A imagem do chão. \end{DoxyCompactList}\item 
+\#define \hyperlink{parser_8h_aa71f1218eb9aadc17420151c26ac8f9c}{G\+A\+M\+E\+O\+V\+ER}~\char`\"{}http\+://127.\+0.\+0.\+1/gameover.\+jpg\char`\"{}\hypertarget{parser_8h_aa71f1218eb9aadc17420151c26ac8f9c}{}\label{parser_8h_aa71f1218eb9aadc17420151c26ac8f9c}
+
+\begin{DoxyCompactList}\small\item\em A imagem de fundo do game over. \end{DoxyCompactList}\item 
+\#define \hyperlink{parser_8h_acd2858a05186b8ea31ec8890fcd9a75e}{F\+U\+N\+DO}~\char`\"{}http\+://127.\+0.\+0.\+1/fundo.\+png\char`\"{}\hypertarget{parser_8h_acd2858a05186b8ea31ec8890fcd9a75e}{}\label{parser_8h_acd2858a05186b8ea31ec8890fcd9a75e}
+
+\begin{DoxyCompactList}\small\item\em A imagem de fundo do jogo em geral. \end{DoxyCompactList}\item 
+\#define \hyperlink{parser_8h_aa8c42b88eac70e4c363e61c1431cd42e}{C\+U\+R\+S\+O\+R1}~\char`\"{}http\+://127.\+0.\+0.\+1/cursor1.\+cur\char`\"{}\hypertarget{parser_8h_aa8c42b88eac70e4c363e61c1431cd42e}{}\label{parser_8h_aa8c42b88eac70e4c363e61c1431cd42e}
+
+\begin{DoxyCompactList}\small\item\em A imagem do cursor normal de jogo. \end{DoxyCompactList}\item 
+\#define \hyperlink{parser_8h_a9d4ee7b8251455cd0627503494273c7a}{C\+U\+R\+S\+O\+R2}~\char`\"{}http\+://127.\+0.\+0.\+1/cursor2.\+cur\char`\"{}\hypertarget{parser_8h_a9d4ee7b8251455cd0627503494273c7a}{}\label{parser_8h_a9d4ee7b8251455cd0627503494273c7a}
+
+\begin{DoxyCompactList}\small\item\em A imagem do cursor das hiperligações. \end{DoxyCompactList}\item 
+\#define \hyperlink{parser_8h_a74b252e2c384cca7b179559d299e7533}{M\+O\+R\+TO}~\char`\"{}http\+://127.\+0.\+0.\+1/mariomorto.\+png\char`\"{}\hypertarget{parser_8h_a74b252e2c384cca7b179559d299e7533}{}\label{parser_8h_a74b252e2c384cca7b179559d299e7533}
+
+\begin{DoxyCompactList}\small\item\em A imagem do Mario morto. \end{DoxyCompactList}\item 
+\#define \hyperlink{parser_8h_a9a4cf244fd6d506e7b13774dc2af0451}{L\+E\+T\+RA}~\char`\"{}http\+://127.\+0.\+0.\+1/mario.\+ttf\char`\"{}\hypertarget{parser_8h_a9a4cf244fd6d506e7b13774dc2af0451}{}\label{parser_8h_a9a4cf244fd6d506e7b13774dc2af0451}
+
+\begin{DoxyCompactList}\small\item\em A letra personalizada do jogo. \end{DoxyCompactList}\item 
+\#define \hyperlink{parser_8h_ae27cb0e68b3459de3a842017689cdbe7}{V\+I\+D\+A1}~\char`\"{}http\+://127.\+0.\+0.\+1/vida1.\+png\char`\"{}\hypertarget{parser_8h_ae27cb0e68b3459de3a842017689cdbe7}{}\label{parser_8h_ae27cb0e68b3459de3a842017689cdbe7}
+
+\begin{DoxyCompactList}\small\item\em A imagem do coração vermelho das vidas. \end{DoxyCompactList}\item 
+\#define \hyperlink{parser_8h_acc2ee969f7db3fce4cfe81e17338fe21}{V\+I\+D\+A0}~\char`\"{}http\+://127.\+0.\+0.\+1/vida0.\+png\char`\"{}\hypertarget{parser_8h_acc2ee969f7db3fce4cfe81e17338fe21}{}\label{parser_8h_acc2ee969f7db3fce4cfe81e17338fe21}
+
+\begin{DoxyCompactList}\small\item\em A imagem do coração cinzento das vidas. \end{DoxyCompactList}\item 
+\#define \hyperlink{parser_8h_a0d5e23bac60070676b465522a140f5c7}{P\+O\+W\+ER}~\char`\"{}http\+://127.\+0.\+0.\+1/powerup.\+png\char`\"{}\hypertarget{parser_8h_a0d5e23bac60070676b465522a140f5c7}{}\label{parser_8h_a0d5e23bac60070676b465522a140f5c7}
+
+\begin{DoxyCompactList}\small\item\em A imagem da caixa dos power-\/ups. \end{DoxyCompactList}\item 
+\#define \hyperlink{parser_8h_a1291f416b069313021b519eea62d5bf1}{N\+O\+R\+M\+AL}~\char`\"{}http\+://127.\+0.\+0.\+1/normal.\+png\char`\"{}\hypertarget{parser_8h_a1291f416b069313021b519eea62d5bf1}{}\label{parser_8h_a1291f416b069313021b519eea62d5bf1}
+
+\begin{DoxyCompactList}\small\item\em A imagem do estado normal do Mario. \end{DoxyCompactList}\item 
+\#define \hyperlink{parser_8h_abafeeb236dcbd953caa3b6ca28b28ea1}{R\+A\+N\+G\+ED}~\char`\"{}http\+://127.\+0.\+0.\+1/ranged.\+png\char`\"{}\hypertarget{parser_8h_abafeeb236dcbd953caa3b6ca28b28ea1}{}\label{parser_8h_abafeeb236dcbd953caa3b6ca28b28ea1}
+
+\begin{DoxyCompactList}\small\item\em A imagem do estado ranged do Mario. \end{DoxyCompactList}\item 
+\#define \hyperlink{parser_8h_a37ceee3eb90aa11326b23a9f6df01078}{V\+O\+AR}~\char`\"{}http\+://127.\+0.\+0.\+1/voar.\+png\char`\"{}\hypertarget{parser_8h_a37ceee3eb90aa11326b23a9f6df01078}{}\label{parser_8h_a37ceee3eb90aa11326b23a9f6df01078}
+
+\begin{DoxyCompactList}\small\item\em A imagem do estado voador do Mario. \end{DoxyCompactList}\item 
+\#define \hyperlink{parser_8h_ab2851177207489621e5c6e7bfad28919}{D\+E\+S\+T\+R\+U\+IR}~\char`\"{}http\+://127.\+0.\+0.\+1/destruir.\+png\char`\"{}\hypertarget{parser_8h_ab2851177207489621e5c6e7bfad28919}{}\label{parser_8h_ab2851177207489621e5c6e7bfad28919}
+
+\begin{DoxyCompactList}\small\item\em A imagem do estado destruidor do Mario. \end{DoxyCompactList}\item 
+\#define \hyperlink{parser_8h_a72445cf3556d7115a564ad0d805c519f}{B\+O\+MB}~\char`\"{}http\+://127.\+0.\+0.\+1/bomb.\+png\char`\"{}\hypertarget{parser_8h_a72445cf3556d7115a564ad0d805c519f}{}\label{parser_8h_a72445cf3556d7115a564ad0d805c519f}
+
+\begin{DoxyCompactList}\small\item\em A imagem do estado bombista do Mario. \end{DoxyCompactList}\item 
+\#define \hyperlink{parser_8h_a74eeac92271e240f2b41e3c80aa32825}{H\+E\+L\+P1}~\char`\"{}http\+://127.\+0.\+0.\+1/range.\+jpg\char`\"{}\hypertarget{parser_8h_a74eeac92271e240f2b41e3c80aa32825}{}\label{parser_8h_a74eeac92271e240f2b41e3c80aa32825}
+
+\begin{DoxyCompactList}\small\item\em A imagem da ajuda geral ativada. \end{DoxyCompactList}\item 
+\#define \hyperlink{parser_8h_a0de63094198e763a2f761ef3b88bae37}{H\+E\+L\+P1\+O\+FF}~\char`\"{}http\+://127.\+0.\+0.\+1/rangeoff.\+jpg\char`\"{}\hypertarget{parser_8h_a0de63094198e763a2f761ef3b88bae37}{}\label{parser_8h_a0de63094198e763a2f761ef3b88bae37}
+
+\begin{DoxyCompactList}\small\item\em A imagem da ajuda geral desativada. \end{DoxyCompactList}\item 
+\#define \hyperlink{parser_8h_a2cd6bce6f5698917356f752b089495ac}{H\+E\+L\+P2}~\char`\"{}http\+://127.\+0.\+0.\+1/range1.\+jpg\char`\"{}\hypertarget{parser_8h_a2cd6bce6f5698917356f752b089495ac}{}\label{parser_8h_a2cd6bce6f5698917356f752b089495ac}
+
+\begin{DoxyCompactList}\small\item\em A imagem da ajuda específica ativada. \end{DoxyCompactList}\item 
+\#define \hyperlink{parser_8h_a16ee9d0df8a57134a2550e415edf052a}{H\+E\+L\+P2\+O\+FF}~\char`\"{}http\+://127.\+0.\+0.\+1/range1off.\+jpg\char`\"{}\hypertarget{parser_8h_a16ee9d0df8a57134a2550e415edf052a}{}\label{parser_8h_a16ee9d0df8a57134a2550e415edf052a}
+
+\begin{DoxyCompactList}\small\item\em A imagem da ajuda específica desativada. \end{DoxyCompactList}\item 
+\#define \hyperlink{parser_8h_aba51915c87d64af47fb1cc59348961c9}{OK}~\char`\"{}http\+://127.\+0.\+0.\+1/ok.\+png\char`\"{}\hypertarget{parser_8h_aba51915c87d64af47fb1cc59348961c9}{}\label{parser_8h_aba51915c87d64af47fb1cc59348961c9}
+
+\begin{DoxyCompactList}\small\item\em A imagem do \char`\"{}ok\char`\"{}. \end{DoxyCompactList}\item 
+\#define \hyperlink{parser_8h_a207fd5507206d307cd63f95374fcd00d}{X}~\char`\"{}http\+://127.\+0.\+0.\+1/close.\+png\char`\"{}\hypertarget{parser_8h_a207fd5507206d307cd63f95374fcd00d}{}\label{parser_8h_a207fd5507206d307cd63f95374fcd00d}
+
+\begin{DoxyCompactList}\small\item\em A imagem da cruz para fechar uma janela. \end{DoxyCompactList}\item 
+\#define \hyperlink{parser_8h_a0ea7ff5947c5f5430a29fdd98391eb2a}{P\+L\+US}~\char`\"{}http\+://127.\+0.\+0.\+1/plus.\+png\char`\"{}\hypertarget{parser_8h_a0ea7ff5947c5f5430a29fdd98391eb2a}{}\label{parser_8h_a0ea7ff5947c5f5430a29fdd98391eb2a}
+
+\begin{DoxyCompactList}\small\item\em A imagem do coração que regenera uma vida do Mario. \end{DoxyCompactList}\item 
+\#define \hyperlink{parser_8h_a7f4d4c278026ed54c40410bbb0f95fc1}{M\+E\+N\+U1}~\char`\"{}http\+://127.\+0.\+0.\+1/menu1.\+png\char`\"{}\hypertarget{parser_8h_a7f4d4c278026ed54c40410bbb0f95fc1}{}\label{parser_8h_a7f4d4c278026ed54c40410bbb0f95fc1}
+
+\begin{DoxyCompactList}\small\item\em A imagem do Mario da direita da página inicial. \end{DoxyCompactList}\item 
+\#define \hyperlink{parser_8h_adbdbb29cbbaa7cb50f212acfb0f86e36}{M\+E\+N\+U2}~\char`\"{}http\+://127.\+0.\+0.\+1/menu2.\+png\char`\"{}\hypertarget{parser_8h_adbdbb29cbbaa7cb50f212acfb0f86e36}{}\label{parser_8h_adbdbb29cbbaa7cb50f212acfb0f86e36}
+
+\begin{DoxyCompactList}\small\item\em A imagem do Mario da esquerda da página inicial. \end{DoxyCompactList}\item 
+\#define \hyperlink{parser_8h_abc08d5e57a50f4f1b9b3fc85ea8a6117}{F\+O\+GO}~\char`\"{}http\+://127.\+0.\+0.\+1/fogo.\+png\char`\"{}\hypertarget{parser_8h_abc08d5e57a50f4f1b9b3fc85ea8a6117}{}\label{parser_8h_abc08d5e57a50f4f1b9b3fc85ea8a6117}
+
+\begin{DoxyCompactList}\small\item\em A imagem do fogo do power-\/up ranged. \end{DoxyCompactList}\item 
+\#define \hyperlink{parser_8h_abdde7809a0e328236d8339c1235cbb92}{B\+O\+OM}~\char`\"{}http\+://127.\+0.\+0.\+1/boom.\+png\char`\"{}\hypertarget{parser_8h_abdde7809a0e328236d8339c1235cbb92}{}\label{parser_8h_abdde7809a0e328236d8339c1235cbb92}
+
+\begin{DoxyCompactList}\small\item\em A imagem da explosão resultante da utilização do power-\/up de destruir obstáculos. \end{DoxyCompactList}\item 
+\#define \hyperlink{parser_8h_a0499768a219eb7cb0379840b8dd3cb8e}{E\+X\+PL}~\char`\"{}http\+://127.\+0.\+0.\+1/explosao.\+png\char`\"{}\hypertarget{parser_8h_a0499768a219eb7cb0379840b8dd3cb8e}{}\label{parser_8h_a0499768a219eb7cb0379840b8dd3cb8e}
+
+\begin{DoxyCompactList}\small\item\em A imagem da explosão do power-\/up bomba. \end{DoxyCompactList}\item 
+\#define \hyperlink{parser_8h_a3bced2883f24aa521786eb6fa8e21319}{O\+N\+E\+UP}~\char`\"{}http\+://127.\+0.\+0.\+1/1up.\+png\char`\"{}\hypertarget{parser_8h_a3bced2883f24aa521786eb6fa8e21319}{}\label{parser_8h_a3bced2883f24aa521786eb6fa8e21319}
+
+\begin{DoxyCompactList}\small\item\em A imagem que surge e desvanece quando se apanha uma vida. \end{DoxyCompactList}\item 
+\#define \hyperlink{parser_8h_a2be29dbf95b4a2c822f307a5b8141184}{N\+E\+XT}~\char`\"{}http\+://127.\+0.\+0.\+1/level.\+png\char`\"{}\hypertarget{parser_8h_a2be29dbf95b4a2c822f307a5b8141184}{}\label{parser_8h_a2be29dbf95b4a2c822f307a5b8141184}
+
+\begin{DoxyCompactList}\small\item\em A imagem que surge e desvanece quando se passa de nível. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{parser_8h_ac15f7c36f6055edec43d0f0f611c4dc0}{parser} ()\hypertarget{parser_8h_ac15f7c36f6055edec43d0f0f611c4dc0}{}\label{parser_8h_ac15f7c36f6055edec43d0f0f611c4dc0}
+
+\begin{DoxyCompactList}\small\item\em Funçao principal, utiliza todas as funções acima. Gera o jogo. \end{DoxyCompactList}\item 
+void \hyperlink{parser_8h_a489d92a251650492415491f7d7b15ffc}{print\+\_\+square} (int px, int py, int tam)
+\begin{DoxyCompactList}\small\item\em Função que imprime os quadrados do tabuleiro. \end{DoxyCompactList}\item 
+void \hyperlink{parser_8h_aab0420d96d59fa2605bb4dbc61985373}{print\+\_\+rect} (int x, int y, int w, int h, char $\ast$\hyperlink{parser_8c_a5e30677198f66d562e15d14ca72cb974}{cor}, float o)
+\begin{DoxyCompactList}\small\item\em Função que imprime um retângulo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Definição de valores globais para todo o jogo e das imagens a serem utilizadas. Contém ainda a definição de alguma funções do jogo. 
+
+\subsection{Function Documentation}
+\index{parser.\+h@{parser.\+h}!print\+\_\+rect@{print\+\_\+rect}}
+\index{print\+\_\+rect@{print\+\_\+rect}!parser.\+h@{parser.\+h}}
+\subsubsection[{\texorpdfstring{print\+\_\+rect(int x, int y, int w, int h, char $\ast$cor, float o)}{print_rect(int x, int y, int w, int h, char *cor, float o)}}]{\setlength{\rightskip}{0pt plus 5cm}void print\+\_\+rect (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{int}]{w, }
+\item[{int}]{h, }
+\item[{char $\ast$}]{cor, }
+\item[{float}]{o}
+\end{DoxyParamCaption}
+)}\hypertarget{parser_8h_aab0420d96d59fa2605bb4dbc61985373}{}\label{parser_8h_aab0420d96d59fa2605bb4dbc61985373}
+
+
+Função que imprime um retângulo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & Posição do retângulo em x. \\
+\hline
+{\em y} & Posição do retângulo em y. \\
+\hline
+{\em w} & Largura do retângulo. \\
+\hline
+{\em h} & Comprimento do retângulo. \\
+\hline
+{\em cor} & Cor do retângulo. \\
+\hline
+{\em o} & Opacidade do retângulo. \\
+\hline
+\end{DoxyParams}
+\index{parser.\+h@{parser.\+h}!print\+\_\+square@{print\+\_\+square}}
+\index{print\+\_\+square@{print\+\_\+square}!parser.\+h@{parser.\+h}}
+\subsubsection[{\texorpdfstring{print\+\_\+square(int px, int py, int tam)}{print_square(int px, int py, int tam)}}]{\setlength{\rightskip}{0pt plus 5cm}void print\+\_\+square (
+\begin{DoxyParamCaption}
+\item[{int}]{px, }
+\item[{int}]{py, }
+\item[{int}]{tam}
+\end{DoxyParamCaption}
+)}\hypertarget{parser_8h_a489d92a251650492415491f7d7b15ffc}{}\label{parser_8h_a489d92a251650492415491f7d7b15ffc}
+
+
+Função que imprime os quadrados do tabuleiro. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em px} & Posição no eixo dos x. \\
+\hline
+{\em py} & Posição no eixo dos y. \\
+\hline
+{\em tam} & Tamanho da imagem \\
+\hline
+\end{DoxyParams}

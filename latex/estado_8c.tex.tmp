@@ -1,0 +1,63 @@
+\hypertarget{estado_8c}{}\section{estado.\+c File Reference}
+\label{estado_8c}\index{estado.\+c@{estado.\+c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}estado.\+h\char`\"{}}\\*
+Include dependency graph for estado.\+c\+:
+% FIG 0
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{estado_8c_a1d5dab30b404fab91608086105afc78c}{M\+A\+X\+\_\+\+B\+U\+F\+F\+ER}~10240\hypertarget{estado_8c_a1d5dab30b404fab91608086105afc78c}{}\label{estado_8c_a1d5dab30b404fab91608086105afc78c}
+
+\begin{DoxyCompactList}\small\item\em O tamanho máximo do buffer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \hyperlink{estado_8c_af32bcca287788ae0563fa9a6debf4603}{estado2str} (\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+DO} e)
+\begin{DoxyCompactList}\small\item\em Função que converte um estado numa string. \end{DoxyCompactList}\item 
+\hyperlink{estado_8h_a857f2529d823a22e6f4a81cf21fb810f}{E\+S\+T\+A\+DO} \hyperlink{estado_8c_a45c321c3b31e4e95b8451d7db7678cf0}{str2estado} (char $\ast$argumentos)
+\begin{DoxyCompactList}\small\item\em Função que converte uma string num estado. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Definição das funções que convertem um estado para uma string e uma string para um estado. 
+
+\subsection{Function Documentation}
+\index{estado.\+c@{estado.\+c}!estado2str@{estado2str}}
+\index{estado2str@{estado2str}!estado.\+c@{estado.\+c}}
+\subsubsection[{\texorpdfstring{estado2str(\+E\+S\+T\+A\+D\+O e)}{estado2str(ESTADO e)}}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ estado2str (
+\begin{DoxyParamCaption}
+\item[{{\bf E\+S\+T\+A\+DO}}]{e}
+\end{DoxyParamCaption}
+)}\hypertarget{estado_8c_af32bcca287788ae0563fa9a6debf4603}{}\label{estado_8c_af32bcca287788ae0563fa9a6debf4603}
+
+
+Função que converte um estado numa string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & O estado \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A string correspondente ao estado e 
+\end{DoxyReturn}
+\index{estado.\+c@{estado.\+c}!str2estado@{str2estado}}
+\index{str2estado@{str2estado}!estado.\+c@{estado.\+c}}
+\subsubsection[{\texorpdfstring{str2estado(char $\ast$argumentos)}{str2estado(char *argumentos)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf E\+S\+T\+A\+DO} str2estado (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{argumentos}
+\end{DoxyParamCaption}
+)}\hypertarget{estado_8c_a45c321c3b31e4e95b8451d7db7678cf0}{}\label{estado_8c_a45c321c3b31e4e95b8451d7db7678cf0}
+
+
+Função que converte uma string num estado. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em argumentos} & Uma string contendo os argumentos passados à C\+GI \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O estado correspondente à string dos argumentos 
+\end{DoxyReturn}

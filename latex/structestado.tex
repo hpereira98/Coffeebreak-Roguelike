@@ -1,0 +1,99 @@
+\hypertarget{structestado}{}\section{estado Struct Reference}
+\label{structestado}\index{estado@{estado}}
+
+
+Estrutura que armazena o estado do jogo.  
+
+
+
+
+{\ttfamily \#include $<$estado.\+h$>$}
+
+
+
+Collaboration diagram for estado\+:
+% FIG 0
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{estado_8h_a55b3f4b56938eeb8fa5e8f9c07baf1b0}{P\+O\+S\+I\+C\+AO} \hyperlink{structestado_a3c4dc3d28aa17dfdc5048150396e4bdc}{portanivel}
+\item 
+char \hyperlink{structestado_a620f2f81ebfe4cba1d6e44b09a1762f7}{nivel}
+\item 
+\hyperlink{estado_8h_a62dca8af1ea0ef89e55ff0182e3dc501}{B\+U\+T\+T\+ON} \hyperlink{structestado_a5f7b606e7ce960d06118ff5916a84f84}{swap}
+\item 
+\hyperlink{estado_8h_a15843d49c23e10e93db7540fd3a5127a}{I\+N\+F\+O\+J\+OG} \hyperlink{structestado_a2fad6d9b40818f08c6d0d09c34916be1}{jog}
+\item 
+\hyperlink{estado_8h_a55b3f4b56938eeb8fa5e8f9c07baf1b0}{P\+O\+S\+I\+C\+AO} \hyperlink{structestado_a7415ebf0dc1fbc535407bb2bd669dc81}{door}
+\item 
+\hyperlink{estado_8h_a67a4a1bb09225ebc3869315583eaa703}{P\+O\+W\+E\+R\+UP} \hyperlink{structestado_a1128015f9f1ad3bc4b63ec8c9e94b48b}{powerup}
+\item 
+\hyperlink{estado_8h_a251aab7869b437bb291d3053ec3ff663}{M\+A\+I\+S\+V\+I\+DA} \hyperlink{structestado_abce94d44e3c723ada8348def234264be}{plus}
+\item 
+char \hyperlink{structestado_a6fbc4a80c4f371036f264ecfe27e5f9e}{num\+\_\+inimigos}
+\item 
+char \hyperlink{structestado_ac1a8a541e2301189833c6f713c416063}{num\+\_\+obstaculos}
+\item 
+\hyperlink{estado_8h_a7b9c871c7ea5afc5d8b631e22672d679}{C\+A\+M\+P\+E\+AO} \hyperlink{structestado_a3421256c459875e123fd25ea089d3e6e}{campeao} \mbox{[}100\mbox{]}
+\item 
+int \hyperlink{structestado_a89701bb4e389f671e0426814ac00347d}{numero}
+\item 
+\hyperlink{estado_8h_a669afeb8186d15d875a4acfaf45777b3}{I\+N\+F\+O\+E\+N\+E\+MY} \hyperlink{structestado_a167d1a72e13b3a1b1bcf3867d75014d9}{inimigo} \mbox{[}\hyperlink{estado_8h_aa97e6cbfdd94711688f1176cb8dd916a}{M\+A\+X\+\_\+\+I\+N\+I\+M\+I\+G\+OS}\mbox{]}
+\item 
+\hyperlink{estado_8h_a1dba7cf209fb6716cca8713b979baaeb}{I\+N\+F\+O\+W\+A\+LL} \hyperlink{structestado_aca60907ddbf62ab205cdb578708b74e1}{obstaculo} \mbox{[}\hyperlink{estado_8h_ac574e2817856ecc9a890d2d47cb9d783}{M\+A\+X\+\_\+\+O\+B\+S\+T\+A\+C\+U\+L\+OS}\mbox{]}
+\item 
+int \hyperlink{structestado_a47e99ef4241dfe72d9d68244a68adb46}{score}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Estrutura que armazena o estado do jogo. 
+
+\subsection{Member Data Documentation}
+\index{estado@{estado}!campeao@{campeao}}
+\index{campeao@{campeao}!estado@{estado}}
+\subsubsection[{\texorpdfstring{campeao}{campeao}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf C\+A\+M\+P\+E\+AO} estado\+::campeao\mbox{[}100\mbox{]}}\hypertarget{structestado_a3421256c459875e123fd25ea089d3e6e}{}\label{structestado_a3421256c459875e123fd25ea089d3e6e}
+Array com os highscores \index{estado@{estado}!door@{door}}
+\index{door@{door}!estado@{estado}}
+\subsubsection[{\texorpdfstring{door}{door}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf P\+O\+S\+I\+C\+AO} estado\+::door}\hypertarget{structestado_a7415ebf0dc1fbc535407bb2bd669dc81}{}\label{structestado_a7415ebf0dc1fbc535407bb2bd669dc81}
+A posição da porta \index{estado@{estado}!inimigo@{inimigo}}
+\index{inimigo@{inimigo}!estado@{estado}}
+\subsubsection[{\texorpdfstring{inimigo}{inimigo}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+N\+F\+O\+E\+N\+E\+MY} estado\+::inimigo\mbox{[}{\bf M\+A\+X\+\_\+\+I\+N\+I\+M\+I\+G\+OS}\mbox{]}}\hypertarget{structestado_a167d1a72e13b3a1b1bcf3867d75014d9}{}\label{structestado_a167d1a72e13b3a1b1bcf3867d75014d9}
+Array com a posição dos inimigos \index{estado@{estado}!jog@{jog}}
+\index{jog@{jog}!estado@{estado}}
+\subsubsection[{\texorpdfstring{jog}{jog}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+N\+F\+O\+J\+OG} estado\+::jog}\hypertarget{structestado_a2fad6d9b40818f08c6d0d09c34916be1}{}\label{structestado_a2fad6d9b40818f08c6d0d09c34916be1}
+As infos do jogador \index{estado@{estado}!nivel@{nivel}}
+\index{nivel@{nivel}!estado@{estado}}
+\subsubsection[{\texorpdfstring{nivel}{nivel}}]{\setlength{\rightskip}{0pt plus 5cm}char estado\+::nivel}\hypertarget{structestado_a620f2f81ebfe4cba1d6e44b09a1762f7}{}\label{structestado_a620f2f81ebfe4cba1d6e44b09a1762f7}
+Nível do jogo \index{estado@{estado}!num\+\_\+inimigos@{num\+\_\+inimigos}}
+\index{num\+\_\+inimigos@{num\+\_\+inimigos}!estado@{estado}}
+\subsubsection[{\texorpdfstring{num\+\_\+inimigos}{num_inimigos}}]{\setlength{\rightskip}{0pt plus 5cm}char estado\+::num\+\_\+inimigos}\hypertarget{structestado_a6fbc4a80c4f371036f264ecfe27e5f9e}{}\label{structestado_a6fbc4a80c4f371036f264ecfe27e5f9e}
+O nº de inimigos \index{estado@{estado}!num\+\_\+obstaculos@{num\+\_\+obstaculos}}
+\index{num\+\_\+obstaculos@{num\+\_\+obstaculos}!estado@{estado}}
+\subsubsection[{\texorpdfstring{num\+\_\+obstaculos}{num_obstaculos}}]{\setlength{\rightskip}{0pt plus 5cm}char estado\+::num\+\_\+obstaculos}\hypertarget{structestado_ac1a8a541e2301189833c6f713c416063}{}\label{structestado_ac1a8a541e2301189833c6f713c416063}
+O nº de obstáculos \index{estado@{estado}!numero@{numero}}
+\index{numero@{numero}!estado@{estado}}
+\subsubsection[{\texorpdfstring{numero}{numero}}]{\setlength{\rightskip}{0pt plus 5cm}int estado\+::numero}\hypertarget{structestado_a89701bb4e389f671e0426814ac00347d}{}\label{structestado_a89701bb4e389f671e0426814ac00347d}
+Numero de registos de jogadores \index{estado@{estado}!obstaculo@{obstaculo}}
+\index{obstaculo@{obstaculo}!estado@{estado}}
+\subsubsection[{\texorpdfstring{obstaculo}{obstaculo}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf I\+N\+F\+O\+W\+A\+LL} estado\+::obstaculo\mbox{[}{\bf M\+A\+X\+\_\+\+O\+B\+S\+T\+A\+C\+U\+L\+OS}\mbox{]}}\hypertarget{structestado_aca60907ddbf62ab205cdb578708b74e1}{}\label{structestado_aca60907ddbf62ab205cdb578708b74e1}
+Array com as infos dos obstáculos \index{estado@{estado}!plus@{plus}}
+\index{plus@{plus}!estado@{estado}}
+\subsubsection[{\texorpdfstring{plus}{plus}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf M\+A\+I\+S\+V\+I\+DA} estado\+::plus}\hypertarget{structestado_abce94d44e3c723ada8348def234264be}{}\label{structestado_abce94d44e3c723ada8348def234264be}
+Mais vida \index{estado@{estado}!portanivel@{portanivel}}
+\index{portanivel@{portanivel}!estado@{estado}}
+\subsubsection[{\texorpdfstring{portanivel}{portanivel}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf P\+O\+S\+I\+C\+AO} estado\+::portanivel}\hypertarget{structestado_a3c4dc3d28aa17dfdc5048150396e4bdc}{}\label{structestado_a3c4dc3d28aa17dfdc5048150396e4bdc}
+Porta anterior \index{estado@{estado}!powerup@{powerup}}
+\index{powerup@{powerup}!estado@{estado}}
+\subsubsection[{\texorpdfstring{powerup}{powerup}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf P\+O\+W\+E\+R\+UP} estado\+::powerup}\hypertarget{structestado_a1128015f9f1ad3bc4b63ec8c9e94b48b}{}\label{structestado_a1128015f9f1ad3bc4b63ec8c9e94b48b}
+Power-\/ups \index{estado@{estado}!score@{score}}
+\index{score@{score}!estado@{estado}}
+\subsubsection[{\texorpdfstring{score}{score}}]{\setlength{\rightskip}{0pt plus 5cm}int estado\+::score}\hypertarget{structestado_a47e99ef4241dfe72d9d68244a68adb46}{}\label{structestado_a47e99ef4241dfe72d9d68244a68adb46}
+O score do jogo \index{estado@{estado}!swap@{swap}}
+\index{swap@{swap}!estado@{estado}}
+\subsubsection[{\texorpdfstring{swap}{swap}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf B\+U\+T\+T\+ON} estado\+::swap}\hypertarget{structestado_a5f7b606e7ce960d06118ff5916a84f84}{}\label{structestado_a5f7b606e7ce960d06118ff5916a84f84}
+Os botões do jogo 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{estado_8h}{estado.\+h}\end{DoxyCompactItemize}
